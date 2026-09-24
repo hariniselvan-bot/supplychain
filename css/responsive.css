@@ -1,0 +1,109 @@
+/* ============ STACKLY — Responsive ============ */
+
+@media (max-width:1200px){
+  .sl-nav-links a.sl-nav-link{padding:10px 10px;font-size:14px}
+  .sl-solutions-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .sl-cases-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .sl-dash-cards-row{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:1100px){
+  .sl-nav-links{display:none}
+  .sl-burger{display:block}
+  .sl-login-btn .sl-login-text{display:none}
+  .sl-login-btn{padding:13px}
+  .sl-hero-inner{grid-template-columns:1fr;padding-top:calc(var(--sl-header-h) + 50px)}
+  .sl-hero-visual{min-height:420px;margin-top:8px}
+  .sl-reach-card{right:0;top:0}
+  .sl-hero-stats{position:relative;bottom:auto;left:auto;right:auto;margin-top:20px}
+  .sl-scroll-hint{display:none}
+  .sl-network-grid,.sl-ai-grid,.sl-sustain-grid,.sl-contact-grid{grid-template-columns:1fr}
+  .sl-contact-info-card{position:static}
+  .sl-dash-grid{grid-template-columns:1fr}
+  .sl-footer-grid{grid-template-columns:1fr 1fr 1fr}
+  .sl-footer-brand{grid-column:1/-1}
+}
+
+@media (max-width:992px){
+  .sl-solutions-grid{grid-template-columns:repeat(2,1fr)}
+  .sl-pricing-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}
+  .sl-price-card.is-featured{order:-1}
+  .sl-cases-grid{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .sl-testi-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .sl-form-row{grid-template-columns:1fr}
+  .sl-auth{grid-template-columns:1fr}
+  .sl-auth-visual{display:none}
+  .sl-hero-stats{grid-template-columns:repeat(3,1fr)}
+  /* How-it-works: horizontal -> vertical */
+  .sl-process-viewport{overflow:visible}
+  .sl-process-track{flex-direction:column;transform:none !important}
+  .sl-process-step{flex:none;min-height:0}
+  .sl-process-progress{display:none}
+  .sl-marquee-track{animation-duration:22s}
+}
+
+@media (max-width:768px){
+  :root{--sl-header-h:84px}
+  .sl-header{top:12px;padding-inline:10px}
+  .sl-nav-pill{height:64px;padding-left:18px}
+  .sl-section{padding:64px 0}
+  .sl-hero-title{font-size:clamp(2.5rem,11vw,3.4rem)}
+  .sl-hero-inner{padding-bottom:46px}
+  .sl-hero-visual{min-height:0;display:flex;flex-direction:column;gap:14px}
+  .sl-map-tags{display:none}
+  .sl-reach-card{position:relative;width:100%;top:auto;right:auto}
+  .sl-hero-stats{grid-template-columns:repeat(3,1fr);gap:10px}
+  .sl-stat-chip{padding:14px 12px;flex-direction:column;text-align:center;gap:8px}
+  .sl-stat-ico{width:36px;height:36px}
+  .sl-hero-cta .sl-btn{padding:15px 24px;font-size:14px}
+  .sl-hero-proof{margin-top:34px}
+  .sl-solutions-grid{grid-template-columns:1fr}
+  .sl-dash-cards-row{grid-template-columns:repeat(2,1fr)}
+  .sl-bars{height:140px}
+  .sl-sustain-media img{aspect-ratio:4/3.4}
+  .sl-footer-grid{grid-template-columns:1fr 1fr}
+  .sl-footer-bar{justify-content:center;text-align:center}
+  .sl-marquee-track{gap:44px}
+  .sl-partner-mark{font-size:16px}
+  .sl-page-hero{padding-top:calc(var(--sl-header-h) + 46px)}
+  .sl-cta{border-radius:28px}
+}
+
+@media (max-width:576px){
+  .sl-hero-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .sl-stat-chip b{font-size:1.15rem}
+  .sl-stat-chip span{font-size:10.5px}
+  .sl-hero-cta{flex-direction:column;align-items:stretch}
+  .sl-hero-cta .sl-btn{justify-content:center}
+  .sl-dash-cards-row{grid-template-columns:1fr 1fr;gap:12px}
+  .sl-kpi{padding:16px}
+  .sl-footer-grid{grid-template-columns:1fr}
+  .sl-auth-panel{padding-top:calc(var(--sl-header-h) + 30px)}
+  .sl-role-select{grid-template-columns:1fr 1fr}
+  .sl-map-chip{display:none}
+  .sl-solution-card,.sl-price-card{padding:26px 22px}
+  .sl-reach-card{padding:22px}
+}
+
+@media (max-width:480px){
+  body{font-size:15px}
+  .sl-nav-pill{height:58px}
+  .sl-logo{font-size:20px}
+  .sl-hero-title{font-size:clamp(2.2rem,12.5vw,2.8rem)}
+  .sl-btn{padding:14px 22px;font-size:13.5px}
+  .sl-hero-stats{grid-template-columns:1fr 1fr 1fr;gap:6px}
+  .sl-stat-chip{padding:10px 6px}
+  .sl-stat-ico{width:30px;height:30px}
+  .sl-stat-chip b{font-size:1rem}
+  .sl-stat-chip span{font-size:9.5px}
+  .sl-footer-grid{gap:26px}
+  .sl-faq-q{padding:18px;font-size:15px}
+  .sl-testi-btn{width:42px;height:42px}
+  .sl-crumbs{font-size:11px}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  .sl-reveal{opacity:1}
+}

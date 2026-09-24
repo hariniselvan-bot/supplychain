@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Create Account — Stackly</title>
+  <meta name="description" content="Create your Stackly supply chain network account.">
+
+  <link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+  <style>
+
+    /* =========================================================
+       STACKLY — NEW SUPPLIER / RECEIVER LOGIN
+       Only authentication area is redesigned.
+       ========================================================= */
+
+    .stackly-login-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(176, 139, 92, .10), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(176, 139, 92, .08), transparent 30%),
+        #f7f5f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stackly-login-grid {
+      width: min(1180px, 100%);
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      background: #fff;
+      border: 1px solid rgba(37, 30, 23, .10);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(39, 30, 20, .12);
+    }
+
+    /* =========================================================
+       LEFT SIDE
+       ========================================================= */
+
+    .stackly-login-left {
+      position: relative;
+      overflow: hidden;
+      min-height: 690px;
+      background: #211b16;
+    }
+
+    .stackly-login-left::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(24, 19, 15, .05) 0%,
+          rgba(24, 19, 15, .40) 55%,
+          rgba(24, 19, 15, .92) 100%
+        ),
+        url("img/about-hero.webp") center/cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    .stackly-login-left::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -170px;
+      top: -170px;
+    }
+
+    .stackly-login-left-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .stackly-login-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: #fff;
+      text-decoration: none;
+      width: fit-content;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .stackly-login-brand img {
+      width: 38px;
+      height: 38px;
+    }
+
+    .stackly-login-left-bottom {
+      max-width: 530px;
+    }
+
+    .stackly-login-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #dfc29d;
+      margin-bottom: 20px;
+    }
+
+    .stackly-login-eyebrow span {
+      width: 28px;
+      height: 1px;
+      background: #dfc29d;
+    }
+
+    .stackly-login-left h2 {
+      font-size: clamp(40px, 4vw, 64px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      margin: 0 0 22px;
+      font-weight: 700;
+    }
+
+    .stackly-login-left h2 em {
+      font-style: normal;
+      color: #d8b58a;
+    }
+
+    .stackly-login-left p {
+      max-width: 460px;
+      color: rgba(255,255,255,.70);
+      font-size: 15px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .stackly-network-status {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: fit-content;
+      padding: 11px 15px;
+      border-radius: 100px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      font-size: 12px;
+      color: rgba(255,255,255,.80);
+    }
+
+    .stackly-network-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #a8c68f;
+      box-shadow: 0 0 0 5px rgba(168,198,143,.12);
+    }
+
+    /* =========================================================
+       RIGHT SIDE
+       ========================================================= */
+
+    .stackly-login-right {
+      padding: 48px 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .stackly-login-form-wrap {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .stackly-login-mobile-brand {
+      display: none;
+    }
+
+    .stackly-login-heading {
+      margin-bottom: 30px;
+    }
+
+    .stackly-login-heading small {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #9c7850;
+      margin-bottom: 10px;
+    }
+
+    .stackly-login-heading h1 {
+      margin: 0 0 10px;
+      color: #211b16;
+      font-size: 40px;
+      line-height: 1;
+      letter-spacing: -.045em;
+    }
+
+    .stackly-login-heading p {
+      margin: 0;
+      color: #827970;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .stackly-login-heading a {
+      color: #805d38;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* =========================================================
+       SUPPLIER / RECEIVER SWITCH
+       ========================================================= */
+
+    .stackly-role-box {
+      background: #f5f2ed;
+      padding: 5px;
+      border-radius: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 28px;
+    }
+
+    .stackly-role-btn {
+      border: 0;
+      background: transparent;
+      padding: 14px 10px;
+      border-radius: 11px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: #8b8177;
+      transition: .3s ease;
+    }
+
+    .stackly-role-btn strong {
+      display: block;
+      color: inherit;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .stackly-role-btn span {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0;
+      opacity: .75;
+    }
+
+    .stackly-role-btn.active {
+      background: #251e18;
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(30,23,17,.15);
+    }
+
+    /* =========================================================
+       ROLE DESCRIPTION
+       ========================================================= */
+
+    .stackly-role-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 15px;
+      border: 1px solid #e8e1d8;
+      border-radius: 13px;
+      margin-bottom: 24px;
+      background: #fffdf9;
+    }
+
+    .stackly-role-icon {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: #eee5d9;
+      color: #745334;
+    }
+
+    .stackly-role-info strong {
+      display: block;
+      color: #2a211a;
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+
+    .stackly-role-info p {
+      margin: 0;
+      font-size: 11px;
+      color: #91877d;
+      line-height: 1.4;
+    }
+
+    /* =========================================================
+       FORM
+       ========================================================= */
+
+    .stackly-new-field {
+      margin-bottom: 19px;
+    }
+
+    .stackly-new-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #30271f;
+      margin-bottom: 8px;
+    }
+
+    .stackly-new-input {
+      width: 100%;
+      height: 52px;
+      padding: 0 15px;
+      border: 1px solid #ddd6cd;
+      border-radius: 12px;
+      background: #fff;
+      color: #241d17;
+      font-family: inherit;
+      font-size: 13px;
+      outline: none;
+      transition: .25s ease;
+      box-sizing: border-box;
+    }
+
+    .stackly-new-input::placeholder {
+      color: #aaa199;
+    }
+
+    .stackly-new-input:focus {
+      border-color: #9b754e;
+      box-shadow: 0 0 0 4px rgba(155,117,78,.09);
+    }
+
+    .stackly-password {
+      position: relative;
+    }
+
+    .stackly-password .stackly-new-input {
+      padding-right: 48px;
+    }
+
+    .stackly-password button {
+      position: absolute;
+      right: 8px;
+      top: 7px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      background: transparent;
+      color: #8e8379;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .stackly-password button:hover {
+      background: #f4f0eb;
+      color: #3b2d20;
+    }
+
+    .stackly-login-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 4px 0 22px;
+      font-size: 11px;
+    }
+
+    .stackly-login-options label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #776e66;
+      cursor: pointer;
+    }
+
+    .stackly-login-options input {
+      accent-color: #6f5032;
+    }
+
+    .stackly-login-options a {
+      color: #765535;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .stackly-login-submit {
+      width: 100%;
+      height: 54px;
+      border: 0;
+      border-radius: 12px;
+      background: #251e18;
+      color: #fff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: .3s ease;
+    }
+
+    .stackly-login-submit:hover {
+      background: #765535;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(70,48,29,.18);
+    }
+
+    .stackly-login-submit svg {
+      transition: .3s ease;
+    }
+
+    .stackly-login-submit:hover svg {
+      transform: translateX(4px);
+    }
+
+    .stackly-login-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 25px 0 18px;
+      color: #a49b92;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .15em;
+    }
+
+    .stackly-login-divider span {
+      flex: 1;
+      height: 1px;
+      background: #e8e1d8;
+    }
+
+    .stackly-social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .stackly-social-btn {
+      height: 48px;
+      border: 1px solid #e1dbd3;
+      border-radius: 11px;
+      background: #fff;
+      color: #40362e;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .stackly-social-btn:hover {
+      border-color: #b99a77;
+      background: #fbf8f4;
+    }
+
+    .stackly-security-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      color: #aaa199;
+      font-size: 10px;
+      margin-top: 24px;
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .stackly-login-heading { margin-bottom: 24px; }
+      .stackly-new-field { margin-bottom: 15px; }
+
+      .stackly-login-page {
+        padding: 18px;
+        min-height: 100svh;
+        align-items: flex-start;
+      }
+
+      .stackly-login-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        border-radius: 22px;
+      }
+
+      .stackly-login-left {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      .stackly-login-left-content {
+        padding: 28px;
+      }
+
+      .stackly-login-left h2 {
+        font-size: 36px;
+      }
+
+      .stackly-login-left p {
+        display: none;
+      }
+
+      .stackly-network-status {
+        margin-top: 18px;
+      }
+
+      .stackly-login-right {
+        padding: 34px 25px 38px;
+      }
+
+      .stackly-login-mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 28px;
+        text-decoration: none;
+        color: #241d17;
+        font-size: 19px;
+        font-weight: 800;
+      }
+
+      .stackly-login-mobile-brand img {
+        width: 30px;
+        height: 30px;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .stackly-login-page {
+        padding: 0;
+        background: #f7f5f0;
+      }
+
+      .stackly-login-grid {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .stackly-login-left {
+        min-height: 250px;
+        height: 250px;
+      }
+
+      .stackly-login-left-content {
+        padding: 24px 22px;
+      }
+
+      .stackly-login-brand {
+        font-size: 19px;
+      }
+
+      .stackly-login-brand img {
+        width: 31px;
+        height: 31px;
+      }
+
+      .stackly-login-left h2 {
+        font-size: 31px;
+      }
+
+      .stackly-login-eyebrow {
+        font-size: 9px;
+        margin-bottom: 13px;
+      }
+
+      .stackly-login-right {
+        padding: 28px 20px 35px;
+      }
+
+      .stackly-login-heading h1 {
+        font-size: 34px;
+      }
+
+      .stackly-role-btn {
+        padding: 13px 5px;
+      }
+
+      .stackly-role-btn strong {
+        font-size: 11px;
+      }
+
+      .stackly-role-btn span {
+        font-size: 9px;
+      }
+
+      .stackly-social-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+<style>
+
+  /* =========================================================
+     LOGIN LOGO — LARGE + ELEGANT
+     ========================================================= */
+  .stackly-login-left .sl-logo {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    flex-shrink: 0;
+    padding: 4px 0;
+  }
+
+  .stackly-login-left .sl-logo img {
+    width: 125px !important;
+    height: auto !important;
+    max-width: none;
+    display: block;
+    filter: brightness(0) invert(1);
+    transition: transform .3s ease, opacity .3s ease;
+  }
+
+  .stackly-login-left .sl-logo:hover img {
+    transform: scale(1.04);
+    opacity: .95;
+  }
+
+  /* Go Back button */
+  .stackly-go-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin-bottom: 24px;
+    padding: 10px 15px;
+    border: 1px solid #e5ddd3;
+    border-radius: 999px;
+    background: rgba(255,255,255,.82);
+    color: #5f4a37;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    box-shadow: 0 7px 20px rgba(50,35,20,.06);
+    transition: .25s ease;
+  }
+
+  .stackly-go-back svg {
+    transition: transform .25s ease;
+  }
+
+  .stackly-go-back:hover {
+    background: #251e18;
+    border-color: #251e18;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37,30,24,.16);
+  }
+
+  .stackly-go-back:hover svg {
+    transform: translateX(-3px);
+  }
+
+  @media (max-width: 900px) {
+    .stackly-login-left .sl-logo img {
+      width: 110px !important;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .stackly-login-left .sl-logo img {
+      width: 100px !important;
+    }
+
+    .stackly-go-back {
+      margin-bottom: 18px;
+      padding: 9px 13px;
+      font-size: 10px;
+    }
+  }
+
+</style>
+<style id="stackly-logo-adjustments">
+  /* Header + footer logo only — preloader is intentionally untouched */
+  .sl-header .sl-logo img,
+  .sl-footer .sl-logo img {
+    width: 150px !important;
+    height: auto !important;
+    max-width: none;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(1100%) hue-rotate(175deg) brightness(92%) contrast(92%);
+  }
+
+  .sl-header .sl-logo,
+  .sl-footer .sl-logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .sl-header .sl-logo img,
+    .sl-footer .sl-logo img {
+      width: 125px !important;
+      height: auto !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sl-header .sl-logo img,
+    .sl-footer .sl-logo img {
+      width: 115px !important;
+    }
+  }
+
+  .stackly-social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+</style>
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
+
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NEW LOGIN AREA
+       ======================================================= -->
+
+  <main class="stackly-login-page">
+
+    <section class="stackly-login-grid">
+
+      <!-- LEFT VISUAL -->
+      <div class="stackly-login-left">
+
+        <div class="stackly-login-left-content">
+
+            <a href="index.html" class="sl-logo" aria-label="Stackly home"><img src="img/stackly-logo.webp" alt="" width="34" height="34"></a>
+
+
+          <div class="stackly-login-left-bottom">
+
+            <div class="stackly-login-eyebrow">
+              <span></span>
+              Supply Chain Network
+            </div>
+
+            <h2>
+              Join.<br>
+              Connect.<br>
+              <em>Deliver.</em>
+            </h2>
+
+            <p>
+              Create one connected workspace for suppliers, receivers,
+              warehouses and logistics teams to keep every movement
+              visible.
+            </p>
+
+            <div class="stackly-network-status">
+              <i class="stackly-network-dot"></i>
+              Stackly Network Online
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT LOGIN -->
+      <div class="stackly-login-right">
+
+        <div class="stackly-login-form-wrap">
+
+          <!-- Mobile Logo -->
+          <a href="index.html" class="stackly-login-mobile-brand">
+            <img src="svg/logo.svg" alt="Stackly">
+            <span>Stackly</span>
+          </a>
+
+
+
+          <a href="index.html" class="stackly-go-back" aria-label="Go back to Stackly home">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5"></path>
+              <path d="M11 18l-6-6 6-6"></path>
+            </svg>
+            <span>Go Back</span>
+          </a>
+
+          <!-- Heading -->
+          <div class="stackly-login-heading">
+
+            <small>Secure Network Registration</small>
+
+            <h1>Create your account.</h1>
+
+            <p>
+              Join Stackly and start managing your
+              supply chain network.
+            </p>
+
+          </div>
+
+
+          <!-- SUPPLIER / RECEIVER -->
+          <div class="stackly-role-box">
+
+            <button
+              type="button"
+              class="stackly-role-btn active"
+              data-stackly-role="SUPPLIER">
+
+              <strong>SUPPLIER</strong>
+              <span>Send & manage orders</span>
+
+            </button>
+
+            <button
+              type="button"
+              class="stackly-role-btn"
+              data-stackly-role="RECEIVER">
+
+              <strong>RECEIVER</strong>
+              <span>Receive & track goods</span>
+
+            </button>
+
+          </div>
+
+
+          <!-- Role Information -->
+          <div class="stackly-role-info">
+
+            <div class="stackly-role-icon">
+
+              <svg
+                width="19"
+                height="19"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                viewBox="0 0 24 24">
+
+                <path d="M3 7h18"/>
+                <path d="M5 7v13h14V7"/>
+                <path d="M8 7V4h8v3"/>
+                <path d="M8 12h8"/>
+                <path d="M8 16h5"/>
+
+              </svg>
+
+            </div>
+
+            <div>
+
+              <strong id="stackly-role-title">
+                Supplier workspace
+              </strong>
+
+              <p id="stackly-role-description">
+                Set up your supplier workspace and manage supply operations.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- FORM -->
+
+          <form data-validate novalidate>
+
+            <input
+              type="hidden"
+              name="role"
+              id="stackly-selected-role"
+              value="SUPPLIER">
+
+            <div class="stackly-new-field">
+              <label for="stackly-name">Full Name</label>
+              <input
+                id="stackly-name"
+                name="name"
+                class="stackly-new-input"
+                type="text"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                data-required>
+              <span class="sl-field-error"></span>
+            </div>
+
+            <div class="stackly-new-field">
+              <label for="stackly-email">Work Email</label>
+              <input
+                id="stackly-email"
+                name="email"
+                class="stackly-new-input"
+                type="email"
+                placeholder="name@company.com"
+                autocomplete="email"
+                data-required>
+              <span class="sl-field-error"></span>
+            </div>
+
+            <div class="stackly-new-field">
+              <label for="stackly-company">Company Name</label>
+              <input
+                id="stackly-company"
+                name="company"
+                class="stackly-new-input"
+                type="text"
+                placeholder="Enter your company name"
+                autocomplete="organization"
+                data-required>
+              <span class="sl-field-error"></span>
+            </div>
+
+            <div class="stackly-new-field">
+              <label for="stackly-password">Password</label>
+              <div class="stackly-password">
+                <input
+                  id="stackly-password"
+                  name="password"
+                  class="stackly-new-input"
+                  type="password"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  data-required
+                  data-min="8">
+                <button
+                  type="button"
+                  data-pw-toggle="stackly-password"
+                  aria-label="Show password">
+                  <svg width="18" height="18" fill="none"
+                       stroke="currentColor" stroke-width="1.6"
+                       viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="sl-field-error"></span>
+            </div>
+
+            <div class="stackly-new-field">
+              <label for="stackly-confirm-password">Confirm Password</label>
+              <div class="stackly-password">
+                <input
+                  id="stackly-confirm-password"
+                  name="confirmPassword"
+                  class="stackly-new-input"
+                  type="password"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  data-required
+                  data-min="8">
+                <button
+                  type="button"
+                  data-pw-toggle="stackly-confirm-password"
+                  aria-label="Show password">
+                  <svg width="18" height="18" fill="none"
+                       stroke="currentColor" stroke-width="1.6"
+                       viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="sl-field-error"></span>
+            </div>
+
+            <div class="stackly-login-options">
+              <label>
+                <input type="checkbox" required>
+                I agree to the terms
+              </label>
+              <a href="login.html">Already have an account?</a>
+            </div>
+
+            <button class="stackly-login-submit" type="submit">
+              <span id="stackly-login-text">Create Supplier Account</span>
+              <svg width="18" height="18" fill="none"
+                   stroke="currentColor" stroke-width="2"
+                   viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14"/>
+                <path d="M13 6l6 6-6 6"/>
+              </svg>
+            </button>
+
+          </form>
+
+
+          <div class="stackly-login-divider">
+            <span></span>
+            ALREADY REGISTERED
+            <span></span>
+          </div>
+
+          <a class="stackly-social-btn"
+             href="login.html"
+             style="width:100%; display:flex; align-items:center; justify-content:center;">
+            Sign in to Stackly
+          </a>
+
+          <div class="stackly-security-note">
+
+            <svg
+              width="13"
+              height="13"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              viewBox="0 0 24 24">
+
+              <rect
+                x="5"
+                y="10"
+                width="14"
+                height="10"
+                rx="2"/>
+
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+
+            </svg>
+
+            Secure registration for your Stackly network
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- EXISTING JS — NOT CHANGED -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/auth.js" defer></script>
+
+
+  <!-- SUPPLIER / RECEIVER SWITCH -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const roleButtons =
+        document.querySelectorAll("[data-stackly-role]");
+
+      const selectedRole =
+        document.getElementById("stackly-selected-role");
+
+      const roleTitle =
+        document.getElementById("stackly-role-title");
+
+      const roleDescription =
+        document.getElementById("stackly-role-description");
+
+      const loginText =
+        document.getElementById("stackly-login-text");
+
+
+      roleButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+          roleButtons.forEach(function (item) {
+            item.classList.remove("active");
+          });
+
+          this.classList.add("active");
+
+          const role =
+            this.getAttribute("data-stackly-role");
+
+          selectedRole.value = role;
+
+
+          if (role === "SUPPLIER") {
+
+            roleTitle.textContent =
+              "Supplier workspace";
+
+            roleDescription.textContent =
+              "Set up your supplier workspace and manage supply operations.";
+
+            loginText.textContent =
+              "Enter Supplier Workspace";
+
+          } else {
+
+            roleTitle.textContent =
+              "Receiver workspace";
+
+            roleDescription.textContent =
+              "Set up your receiver workspace and track incoming goods.";
+
+            loginText.textContent =
+              "Enter Receiver Workspace";
+
+          }
+
+        });
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>

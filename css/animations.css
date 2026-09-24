@@ -1,0 +1,48 @@
+/* ============ STACKLY — Animations ============ */
+
+/* AOS-like reveal states (used with GSAP / AOS data attributes) */
+[data-aos]{transition-property:opacity,transform;transition-timing-function:cubic-bezier(.22,1,.36,1)}
+[data-aos="fade-up"]{transform:translateY(36px);opacity:0}
+[data-aos="fade-down"]{transform:translateY(-36px);opacity:0}
+[data-aos="fade-left"]{transform:translateX(36px);opacity:0}
+[data-aos="fade-right"]{transform:translateX(-36px);opacity:0}
+[data-aos="zoom-in"]{transform:scale(.92);opacity:0}
+[data-aos].aos-animate{transform:none;opacity:1}
+
+/* Floating loops */
+@keyframes slFloatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes slFloatY2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+.sl-float{animation:slFloatY 6s ease-in-out infinite}
+.sl-float-2{animation:slFloatY2 7.5s ease-in-out infinite}
+.sl-float-3{animation:slFloatY 8.5s ease-in-out infinite reverse}
+
+/* Grain texture overlay */
+.sl-grain{position:relative}
+.sl-grain::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+}
+
+/* Magnetic buttons get transform from JS */
+.sl-magnetic{transition:transform .3s cubic-bezier(.22,1,.36,1)}
+
+/* Animated underline for text links */
+.sl-link-anim{position:relative}
+.sl-link-anim::after{content:"";position:absolute;left:0;bottom:-2px;height:1.5px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.sl-link-anim:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* Number counter flip-in */
+@keyframes slCountPop{0%{transform:translateY(14px);opacity:0}100%{transform:none;opacity:1}}
+
+/* Hero title line masks handled by JS/GSAP; CSS fallback visible */
+.no-js .sl-hero-title .sl-line>span,.no-anim .sl-hero-title .sl-line>span{transform:none}
+
+/* Route dash animation */
+.sl-route-anim{stroke-dashoffset:1000;animation:slDash 4s linear infinite}
+@keyframes slDash{to{stroke-dashoffset:0}}
+
+/* Marquee for big text */
+.sl-text-marquee{overflow:hidden;white-space:nowrap}
+.sl-text-marquee-track{display:inline-flex;gap:60px;width:max-content;animation:slMarquee 24s linear infinite}
+
+/* Preloader fallback (if JS disabled, hide after CSS-only timeout is impossible — JS drives it) */

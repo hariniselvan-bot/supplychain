@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Stackly logo">
+  <rect width="48" height="48" rx="12" fill="#111111"/>
+  <path d="M14 14.5h20a3 3 0 0 1 0 6H17a3.5 3.5 0 0 0 0 7h14a3 3 0 0 1 0 6H17a3.5 3.5 0 0 0 0 7h17a3 3 0 0 1 0 6H14A9.5 9.5 0 0 1 14 14.5Z" fill="#C8892F" transform="translate(0 -4)"/>
+  <rect x="14" y="34" width="20" height="5" rx="2.5" fill="#E9C27A"/>
+</svg>
