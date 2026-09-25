@@ -51,6 +51,576 @@
 </style>
 
 <script>document.documentElement.classList.remove('no-js')</script>
+
+<style id="stackly-mobile-responsiveness-fix">
+/* =========================================================
+   STACKLY — MOBILE RESPONSIVENESS ONLY
+   Desktop styles/design remain unchanged.
+   ========================================================= */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main,
+  section,
+  header,
+  footer,
+  .sl-header,
+  .sl-footer,
+  .sl-section,
+  .sl-page-hero,
+  .sl-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+  }
+
+  /* ---------- Header: preserve existing design, prevent overflow ---------- */
+  .sl-header {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .sl-nav-pill {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    min-width: 0;
+  }
+
+  .sl-header nav {
+    min-width: 0;
+  }
+
+  .sl-header-actions {
+    min-width: 0;
+    flex-shrink: 0;
+  }
+
+  .sl-burger {
+    flex-shrink: 0;
+  }
+
+  .sl-mobile-menu {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .sl-mobile-link,
+  .sl-mobile-menu-foot,
+  .sl-mobile-menu-foot .sl-btn {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ---------- Hero ---------- */
+  .sl-page-hero,
+  .sl-page-hero-bg {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .sl-page-hero-bg img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sl-page-title,
+  .sl-page-hero .sl-lead {
+    width: 100%;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+
+  .sl-page-title {
+    font-size: clamp(34px, 9vw, 52px);
+    line-height: 1.05;
+  }
+
+  /* ---------- Story: image above text on mobile ---------- */
+  .sl-story-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 32px;
+  }
+
+  .sl-story-grid > *,
+  .sl-story-media,
+  .sl-story-media + div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 1 auto !important;
+  }
+
+  .sl-story-media {
+    overflow: hidden;
+  }
+
+  .sl-story-media img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .sl-story-grid .sl-h2,
+  .sl-story-grid .sl-lead {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .sl-h2 {
+    max-width: 100%;
+    font-size: clamp(30px, 8.5vw, 48px);
+    overflow-wrap: break-word;
+  }
+
+  /* ---------- Values / cards ---------- */
+  .sl-values-grid,
+  .sl-leaders-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-value-card,
+  .sl-leader-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .sl-value-card *,
+  .sl-leader-card * {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* ---------- Mission / Vision ---------- */
+  .sl-story-grid .sl-value-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sl-story-grid .sl-value-card[style] {
+    padding: 28px !important;
+  }
+
+  /* ---------- Global stats ---------- */
+  .sl-network {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    border-radius: 28px !important;
+    overflow: hidden;
+  }
+
+  .sl-network .sl-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sl-stats-band {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 22px 16px;
+  }
+
+  .sl-stats-band > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .sl-stats-band b,
+  .sl-stats-band span {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* ---------- Technology ---------- */
+  .sl-sustain-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 32px;
+  }
+
+  .sl-sustain-grid > *,
+  .sl-sustain-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 0 1 auto !important;
+  }
+
+  .sl-sustain-media {
+    overflow: hidden;
+  }
+
+  .sl-sustain-media img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .sl-sustain-list,
+  .sl-sustain-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-sustain-item > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* ---------- Leadership ---------- */
+  .sl-leaders-grid {
+    gap: 18px;
+  }
+
+  .sl-leader-card {
+    overflow: hidden;
+  }
+
+  /* ---------- CTA ---------- */
+  .sl-cta,
+  .sl-cta-inner,
+  .sl-cta-bg {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-cta {
+    overflow: hidden;
+  }
+
+  .sl-cta-bg img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sl-cta-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sl-cta-inner h2,
+  .sl-cta-inner p,
+  .sl-cta-inner .sl-btn {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .sl-cta-inner .sl-btn {
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* ---------- Footer ---------- */
+  .sl-footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .sl-footer-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 30px;
+  }
+
+  .sl-footer-brand,
+  .sl-footer-col {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-footer-brand p,
+  .sl-footer-col a {
+    overflow-wrap: break-word;
+  }
+
+  .sl-footer-bar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .sl-footer-bar > *,
+  .sl-footer-bar ul {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-footer-bar ul {
+    flex-wrap: wrap;
+  }
+
+  .sl-giant {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: clamp(48px, 18vw, 120px) !important;
+    line-height: .8;
+    white-space: nowrap;
+  }
+
+  /* ---------- Generic protection against desktop-width children ---------- */
+  .sl-section > *,
+  .sl-container > *,
+  .sl-section-head,
+  .sl-section-head > *,
+  .sl-lead,
+  .sl-eyebrow,
+  .sl-price-name {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-lead,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  span {
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .sl-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sl-page-title {
+    font-size: clamp(32px, 9.5vw, 44px);
+  }
+
+  .sl-h2 {
+    font-size: clamp(29px, 8.5vw, 40px);
+  }
+
+  .sl-story-grid,
+  .sl-sustain-grid {
+    gap: 26px;
+  }
+
+  .sl-network {
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    border-radius: 24px !important;
+  }
+
+  .sl-stats-band {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .sl-story-grid .sl-value-card[style] {
+    padding: 24px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .sl-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .sl-network {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px) !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* ================================
+   LEADERSHIP CARD ALIGNMENT
+   ================================ */
+
+.sl-leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.sl-leader-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Same image area for every card */
+.sl-leader-image {
+  width: 100%;
+  height: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  margin-bottom: 20px;
+}
+
+.sl-leader-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Avatar stays aligned */
+.sl-leader-ava {
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+/* Names */
+.sl-leader-card h4 {
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+/* Job title */
+.sl-leader-card > span {
+  display: block;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* Description gets consistent positioning */
+.sl-leader-card p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 768px) {
+  .sl-leaders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sl-leader-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sl-leader-image {
+    height: 280px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .sl-leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .sl-leader-image {
+    height: 250px;
+  }
+}
+</style>
+
 </head><body>
 <div class="sl-preloader" aria-hidden="true">
   <div class="sl-preloader-logo"> <span class="sl-preloader-word"><span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span></span></div>
@@ -194,25 +764,116 @@
     </div>
   </div>
 </section>
-
 <section class="sl-section" id="leadership" style="padding-top:20px" aria-label="Leadership">
   <div class="sl-container">
+
     <div class="sl-section-head is-center">
       <span class="sl-eyebrow" style="justify-content:center">Leadership</span>
       <h2 class="sl-h2">The people behind <em>the platform.</em></h2>
-      <p class="sl-lead" style="text-align:center">Demo profiles for presentation purposes.</p>
+      <p class="sl-lead" style="text-align:center">
+        Demo profiles for presentation purposes.
+      </p>
     </div>
-    <div class="sl-leaders-grid"><article class="sl-leader-card sl-spotlight" data-aos="fade-up" data-aos-delay="0">
-  <div class="sl-leader-ava">MC</div><h4>Maya Chen</h4><span>Chief Executive Officer</span><p>Former VP of Global Logistics at a Fortune 100 retailer. Believes supply chains should be boring — in the best way.</p>
-</article><article class="sl-leader-card sl-spotlight" data-aos="fade-up" data-aos-delay="80">
-  <div class="sl-leader-ava">JR</div><h4>Jonas Richter</h4><span>Chief Technology Officer</span><p>Built planetary-scale routing systems. Now applies them to the physical world of freight.</p>
-</article><article class="sl-leader-card sl-spotlight" data-aos="fade-up" data-aos-delay="160">
-  <div class="sl-leader-ava">AO</div><h4>Amara Osei</h4><span>Chief Operations Officer</span><p>Two decades across ports, rails and warehouses on four continents.</p>
-</article><article class="sl-leader-card sl-spotlight" data-aos="fade-up" data-aos-delay="240">
-  <div class="sl-leader-ava">LT</div><h4>Lucas Torres</h4><span>Chief Product Officer</span><p>Obsessed with turning supply chain complexity into one calm, clear interface.</p>
-</article></div>
+
+    <div class="sl-leaders-grid">
+
+      <!-- Maya Chen -->
+      <article class="sl-leader-card sl-spotlight"
+        data-aos="fade-up"
+        data-aos-delay="0">
+
+        <div class="sl-leader-image">
+          <img src="img/ppl2.webp"
+               alt="Maya Chen"
+               loading="lazy">
+        </div>
+
+        <div class="sl-leader-ava">MC</div>
+
+        <h4>Maya Chen</h4>
+        <span>Chief Executive Officer</span>
+
+        <p>
+          Former VP of Global Logistics at a Fortune 100 retailer.
+          Believes supply chains should be boring — in the best way.
+        </p>
+
+      </article>
+
+      <!-- Jonas Richter -->
+      <article class="sl-leader-card sl-spotlight"
+        data-aos="fade-up"
+        data-aos-delay="80">
+
+        <div class="sl-leader-image">
+          <img src="img/ppl3.webp"
+               alt="Jonas Richter"
+               loading="lazy">
+        </div>
+
+        <div class="sl-leader-ava">JR</div>
+
+        <h4>Jonas Richter</h4>
+        <span>Chief Technology Officer</span>
+
+        <p>
+          Built planetary-scale routing systems. Now applies them
+          to the physical world of freight.
+        </p>
+
+      </article>
+
+      <!-- Amara Osei -->
+      <article class="sl-leader-card sl-spotlight"
+        data-aos="fade-up"
+        data-aos-delay="160">
+
+        <div class="sl-leader-image">
+          <img src="img/ppl4.webp"
+               alt="Amara Osei"
+               loading="lazy">
+        </div>
+
+        <div class="sl-leader-ava">AO</div>
+
+        <h4>Amara Osei</h4>
+        <span>Chief Operations Officer</span>
+
+        <p>
+          Two decades across ports, rails and warehouses on four
+          continents.
+        </p>
+
+      </article>
+
+      <!-- Lucas Torres -->
+      <article class="sl-leader-card sl-spotlight"
+        data-aos="fade-up"
+        data-aos-delay="240">
+
+        <div class="sl-leader-image">
+          <img src="img/ppl5.webp"
+               alt="Lucas Torres"
+               loading="lazy">
+        </div>
+
+        <div class="sl-leader-ava">LT</div>
+
+        <h4>Lucas Torres</h4>
+        <span>Chief Product Officer</span>
+
+        <p>
+          Obsessed with turning supply chain complexity into one
+          calm, clear interface.
+        </p>
+
+      </article>
+
+    </div>
   </div>
 </section>
+
+
 
 <section class="sl-section" style="padding-bottom:0">
   <div class="sl-cta">

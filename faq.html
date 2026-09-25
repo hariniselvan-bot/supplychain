@@ -51,6 +51,660 @@
 </style>
 
 <script>document.documentElement.classList.remove('no-js')</script>
+
+<style id="stackly-mobile-responsive-fix">
+/* =========================================================
+   STACKLY — MOBILE RESPONSIVENESS FIX
+   Mobile only. Desktop styles remain untouched.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- Global viewport protection ---------- */
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+    min-width: 0;
+  }
+
+  body {
+    position: relative;
+  }
+
+  main,
+  section,
+  header,
+  footer,
+  .sl-section,
+  .sl-container,
+  .sl-page-hero,
+  .sl-cta,
+  .sl-cta-bg,
+  .sl-cta-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100% !important;
+  }
+
+  img {
+    height: auto;
+  }
+
+  /* ---------- Header ---------- */
+
+  .sl-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .sl-nav-pill {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    min-width: 0 !important;
+  }
+
+  .sl-logo {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .sl-logo img {
+    max-width: 100% !important;
+  }
+
+  .sl-header-actions {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .sl-burger {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .sl-mobile-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .sl-page-hero {
+    overflow: hidden !important;
+  }
+
+  .sl-page-hero .sl-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sl-crumbs {
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+
+  .sl-page-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    font-size: clamp(34px, 9vw, 52px) !important;
+    line-height: 1.05 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .sl-page-hero .sl-lead {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* ---------- General text ---------- */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .sl-h2 {
+    max-width: 100% !important;
+    font-size: clamp(30px, 8.5vw, 48px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  /* =====================================================
+     FAQ PAGE
+     Desktop:
+       CATEGORY SIDEBAR | FAQ CONTENT
+
+     Mobile:
+       CATEGORY
+       SEARCH
+       FAQ CARDS
+     ===================================================== */
+
+  .sl-faq-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 20px !important;
+  }
+
+  .sl-faq-layout > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Category navigation becomes a full-width horizontal-safe block.
+     No desktop-width sidebar remains on mobile. */
+  .sl-faq-cats {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .sl-faq-cat {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+
+    padding: 12px 14px !important;
+
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .sl-faq-cat small {
+    flex: 0 0 auto !important;
+  }
+
+  /* FAQ content column */
+  .sl-faq-layout > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Search box */
+  .sl-faq-search {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .sl-faq-search input {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* FAQ list */
+  .sl-faq-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-faq-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .sl-faq-q {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 14px !important;
+
+    white-space: normal !important;
+    text-align: left !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .sl-faq-q > span,
+  .sl-faq-icon {
+    flex: 0 0 auto !important;
+  }
+
+  .sl-faq-a {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .sl-faq-a p {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .sl-faq-empty {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- CTA ---------- */
+
+  .sl-cta {
+    overflow: hidden !important;
+  }
+
+  .sl-cta-bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sl-cta-bg img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .sl-cta-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  .sl-cta-inner h2,
+  .sl-cta-inner p,
+  .sl-cta-inner .sl-btn {
+    max-width: 100% !important;
+    overflow-wrap: normal;
+  }
+
+  .sl-cta-inner .sl-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* ---------- Footer ---------- */
+
+  .sl-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sl-footer .sl-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sl-footer-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 30px !important;
+  }
+
+  .sl-footer-brand,
+  .sl-footer-col {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-footer-brand p,
+  .sl-footer-col a {
+    max-width: 100% !important;
+    overflow-wrap: normal;
+  }
+
+  .sl-socials {
+    max-width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .sl-footer-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .sl-footer-bar > *,
+  .sl-footer-bar ul {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-footer-bar ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .sl-giant {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    font-size: clamp(48px, 18vw, 120px) !important;
+    line-height: .8 !important;
+  }
+}
+
+/* ---------- Smaller mobile widths ---------- */
+
+@media (max-width: 480px) {
+
+  .sl-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .sl-page-title {
+    font-size: clamp(32px, 9.5vw, 44px) !important;
+  }
+
+  .sl-h2 {
+    font-size: clamp(29px, 8.5vw, 40px) !important;
+  }
+
+  .sl-faq-cats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .sl-faq-cat {
+    padding: 11px 12px !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* ---------- 320px safety ---------- */
+
+@media (max-width: 359px) {
+
+  .sl-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .sl-faq-cats {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+</style>
+
+
+<style id="stackly-added-faq-sections">
+/* =========================================================
+   STACKLY — THREE ADDITIONAL FAQ SECTIONS
+   ========================================================= */
+
+.sl-added-section {
+  padding-top: 40px;
+}
+
+.sl-added-section .sl-section-head {
+  max-width: 760px;
+}
+
+.sl-added-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.sl-added-topic-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 235px;
+  padding: 26px;
+  border: 1px solid rgba(20, 20, 20, .10);
+  border-radius: 24px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.sl-added-topic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.07);
+}
+
+.sl-added-topic-number,
+.sl-added-step {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--sl-gold, #c9a27e);
+}
+
+.sl-added-topic-card h3,
+.sl-added-process-card h3 {
+  margin: 34px 0 10px;
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.sl-added-topic-card p,
+.sl-added-process-card p {
+  margin: 0;
+  line-height: 1.65;
+  opacity: .68;
+}
+
+.sl-added-arrow {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.sl-added-dark {
+  background: #111;
+  color: #fff;
+}
+
+.sl-added-dark .sl-lead {
+  color: rgba(255,255,255,.65);
+}
+
+.sl-added-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.sl-added-process-card {
+  min-height: 215px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.045);
+  box-sizing: border-box;
+}
+
+.sl-added-process-card p {
+  color: rgba(255,255,255,.62);
+}
+
+.sl-added-support {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 30px;
+  padding: 36px;
+  border: 1px solid rgba(20,20,20,.10);
+  border-radius: 28px;
+  background: #f5f1ea;
+  box-sizing: border-box;
+}
+
+.sl-added-support .sl-h2 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.sl-added-support p {
+  max-width: 650px;
+  margin: 0;
+  line-height: 1.65;
+  opacity: .7;
+}
+
+.sl-added-support-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .sl-added-section {
+    padding-top: 28px;
+  }
+
+  .sl-added-topic-grid,
+  .sl-added-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .sl-added-topic-card,
+  .sl-added-process-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 22px;
+    border-radius: 21px;
+  }
+
+  .sl-added-topic-card h3,
+  .sl-added-process-card h3 {
+    margin-top: 24px;
+    font-size: 19px;
+  }
+
+  .sl-added-support {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px 20px;
+    border-radius: 23px;
+  }
+
+  .sl-added-support-action {
+    justify-content: flex-start;
+  }
+
+  .sl-added-support-action .sl-btn {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 359px) {
+  .sl-added-topic-card,
+  .sl-added-process-card {
+    padding: 19px;
+  }
+
+  .sl-added-support {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+</style>
+
 </head><body>
 <div class="sl-preloader" aria-hidden="true">
   <div class="sl-preloader-logo"> <span class="sl-preloader-word"><span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span></span></div>
@@ -184,6 +838,100 @@
     </div>
   </div>
 </section>
+
+<!-- =========================================================
+     ADDED SECTION 1 — POPULAR HELP TOPICS
+     ========================================================= -->
+<section class="sl-section sl-added-section">
+  <div class="sl-container">
+    <div class="sl-section-head">
+      <span class="sl-eyebrow">Popular topics</span>
+      <h2 class="sl-h2">Find answers <em>faster.</em></h2>
+      <p class="sl-lead">Explore the areas customers ask about most, from tracking and billing to security and integrations.</p>
+    </div>
+
+    <div class="sl-added-topic-grid">
+      <a href="#shipping" class="sl-added-topic-card">
+        <span class="sl-added-topic-number">01</span>
+        <h3>Shipping &amp; Tracking</h3>
+        <p>Routes, carriers, milestones, alerts and delivery visibility.</p>
+        <span class="sl-added-arrow">→</span>
+      </a>
+
+      <a href="#billing" class="sl-added-topic-card">
+        <span class="sl-added-topic-number">02</span>
+        <h3>Billing &amp; Plans</h3>
+        <p>Subscriptions, invoices, usage, upgrades and plan changes.</p>
+        <span class="sl-added-arrow">→</span>
+      </a>
+
+      <a href="#technology" class="sl-added-topic-card">
+        <span class="sl-added-topic-number">03</span>
+        <h3>Technology &amp; API</h3>
+        <p>Integrations, API access, webhooks and connected systems.</p>
+        <span class="sl-added-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ADDED SECTION 2 — HOW STACKLY SUPPORTS YOU
+     ========================================================= -->
+<section class="sl-section sl-added-section sl-added-dark">
+  <div class="sl-container">
+    <div class="sl-section-head">
+      <span class="sl-eyebrow">Support process</span>
+      <h2 class="sl-h2">From question to <em>solution.</em></h2>
+      <p class="sl-lead">A simple support flow designed to get you moving again without unnecessary steps.</p>
+    </div>
+
+    <div class="sl-added-process-grid">
+      <article class="sl-added-process-card">
+        <span class="sl-added-step">01</span>
+        <h3>Search</h3>
+        <p>Use the help center to quickly find answers to common questions.</p>
+      </article>
+
+      <article class="sl-added-process-card">
+        <span class="sl-added-step">02</span>
+        <h3>Explore</h3>
+        <p>Review the relevant guidance, features and setup information.</p>
+      </article>
+
+      <article class="sl-added-process-card">
+        <span class="sl-added-step">03</span>
+        <h3>Connect</h3>
+        <p>Still need help? Reach the Stackly team directly for assistance.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ADDED SECTION 3 — SUPPORT CTA
+     ========================================================= -->
+<section class="sl-section sl-added-section">
+  <div class="sl-container">
+    <div class="sl-added-support">
+      <div>
+        <span class="sl-eyebrow">Need more help?</span>
+        <h2 class="sl-h2">Talk to the <em>Stackly team.</em></h2>
+        <p>Can't find what you're looking for? Send us your question and our team can help you find the right answer.</p>
+      </div>
+
+      <div class="sl-added-support-action">
+        <a href="contact.html" class="sl-btn sl-btn-gold">
+          Contact Support
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sl-section" style="padding-bottom:0">
   <div class="sl-cta">
     <div class="sl-cta-bg"><img src="img/night.webp" alt="" loading="lazy"></div>

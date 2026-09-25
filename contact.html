@@ -51,6 +51,445 @@
 </style>
 
 <script>document.documentElement.classList.remove('no-js')</script>
+
+<style id="stackly-contact-mobile-fix">
+/* =========================================================
+   STACKLY — CONTACT MOBILE RESPONSIVENESS
+   Mobile only. Existing desktop design is untouched.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+    min-width: 0;
+  }
+
+  main,
+  section,
+  header,
+  footer,
+  .sl-section,
+  .sl-container,
+  .sl-page-hero,
+  .sl-contact-grid,
+  .sl-contact-info-card,
+  .sl-contact-form-card,
+  .sl-cta,
+  .sl-cta-inner,
+  .sl-cta-bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100% !important;
+  }
+
+  img {
+    height: auto;
+  }
+
+  /* Header — keep existing design */
+  .sl-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  .sl-nav-pill {
+    width: calc(100% - 24px) !important;
+    max-width: calc(100% - 24px) !important;
+    min-width: 0 !important;
+  }
+
+  .sl-logo,
+  .sl-header-actions,
+  .sl-burger {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+  }
+
+  .sl-mobile-menu {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hero */
+  .sl-page-hero {
+    overflow: hidden !important;
+  }
+
+  .sl-page-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(34px, 9vw, 52px) !important;
+    line-height: 1.05 !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+  .sl-page-hero .sl-lead {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Contact layout: desktop columns -> mobile stack */
+  .sl-contact-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+
+  .sl-contact-info-card,
+  .sl-contact-form-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .sl-contact-info-card {
+    padding: 24px !important;
+  }
+
+  .sl-contact-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .sl-contact-row > div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .sl-contact-row span {
+    max-width: 100% !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .sl-contact-form-card {
+    padding: 24px !important;
+  }
+
+  .sl-form-row {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 0 !important;
+  }
+
+  .sl-field {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sl-field input,
+  .sl-field select,
+  .sl-field textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .sl-field textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+
+  .sl-btn-block {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* CTA */
+  .sl-cta {
+    overflow: hidden !important;
+  }
+
+  .sl-cta-bg {
+    overflow: hidden !important;
+  }
+
+  .sl-cta-bg img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .sl-cta-inner h2,
+  .sl-cta-inner p,
+  .sl-cta-inner .sl-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sl-cta-inner .sl-btn {
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* Footer */
+  .sl-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .sl-footer-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 30px !important;
+  }
+
+  .sl-footer-brand,
+  .sl-footer-col {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .sl-footer-bar {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .sl-footer-bar ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  .sl-giant {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    font-size: clamp(48px, 18vw, 120px) !important;
+    line-height: .8 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sl-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .sl-contact-info-card,
+  .sl-contact-form-card {
+    padding: 20px !important;
+  }
+
+  .sl-page-title {
+    font-size: clamp(32px, 9.5vw, 44px) !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  .sl-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .sl-contact-info-card,
+  .sl-contact-form-card {
+    padding: 18px !important;
+  }
+
+  .sl-cta-inner {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+</style>
+
+
+<style id="stackly-contact-added-sections">
+.sl-contact-added-section {
+  padding-top: 50px;
+}
+
+.sl-contact-added-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.sl-contact-added-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 245px;
+  padding: 28px;
+  border: 1px solid rgba(20,20,20,.10);
+  border-radius: 24px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.sl-contact-added-num {
+  color: var(--sl-gold, #c9a27e);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sl-contact-added-card h3 {
+  margin: 34px 0 10px;
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.sl-contact-added-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--sl-muted, #777);
+}
+
+.sl-contact-added-card a {
+  margin-top: auto;
+  padding-top: 22px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.sl-contact-added-card a span {
+  margin-left: 6px;
+}
+
+.sl-contact-added-dark {
+  background: #111;
+  color: #fff;
+}
+
+.sl-contact-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.sl-contact-next-item {
+  display: flex;
+  gap: 18px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 24px;
+  background: rgba(255,255,255,.045);
+}
+
+.sl-contact-next-item > span {
+  flex: 0 0 auto;
+  color: var(--sl-gold-light, #d6b58d);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sl-contact-next-item h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.sl-contact-next-item p {
+  margin: 0;
+  color: rgba(255,255,255,.62);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .sl-contact-added-section {
+    padding-top: 30px;
+  }
+
+  .sl-contact-added-grid,
+  .sl-contact-next-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .sl-contact-added-card {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 22px;
+    border-radius: 21px;
+  }
+
+  .sl-contact-added-card h3 {
+    margin-top: 24px;
+    font-size: 19px;
+  }
+
+  .sl-contact-next-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 21px;
+    border-radius: 21px;
+  }
+}
+
+@media (max-width: 359px) {
+  .sl-contact-added-card,
+  .sl-contact-next-item {
+    padding: 18px;
+  }
+}
+</style>
+
 </head><body>
 <div class="sl-preloader" aria-hidden="true">
   <div class="sl-preloader-logo"> <span class="sl-preloader-word"><span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span></span></div>
@@ -118,16 +557,16 @@
       <aside class="sl-contact-info-card" data-aos="fade-right">
         <h3>Talk to a human</h3>
         <p>Average first response time: 2h 14m. No chatbots pretending to be people.</p>
-        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Email</b><span>hello@stackly.demo</span></div></div>
-        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg></span><div><b>Phone</b><span>+1 (555) 014-2026 · 24/7 Enterprise line</span></div></div>
-        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><b>Headquarters</b><span>400 Harbor Line, Suite 900, San Francisco, CA</span></div></div>
+        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Email</b><span>info@thestackly.com</span></div></div>
+        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg></span><div><b>Phone</b><span>+91 70107 92745</span></div></div>
+        <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><b>Headquarters</b><span>MMR COMPLEX, SALEM, Tamil Nadu 636008</span></div></div>
         <div class="sl-contact-row"><span class="sl-contact-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><div><b>Office hours</b><span>Mon–Fri, 8:00–18:00 PT · Global follow-the-sun support</span></div></div>
         <a href="faq.html" class="sl-btn sl-btn-ghost sl-btn-sm" style="margin-top:24px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2);color:#fff">Browse Help Center <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </aside>
       <div class="sl-contact-form-card" data-aos="fade-left">
         <h2 style="font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:6px">Send us a message</h2>
         <p style="color:var(--sl-muted);font-size:14px;margin-bottom:28px">Fields marked with your attention are required.</p>
-        <form data-validate novalidate>
+        <form id="stackly-contact-form" novalidate>
           <div class="sl-form-row">
             <div class="sl-field"><label for="c-name">Full name</label><input id="c-name" type="text" placeholder="Jane Cooper" data-required><span class="sl-field-error"></span></div>
             <div class="sl-field"><label for="c-email">Work email</label><input id="c-email" type="email" placeholder="jane@company.com" data-required><span class="sl-field-error"></span></div>
@@ -145,13 +584,88 @@
             </select><span class="sl-field-error"></span></div>
           <div class="sl-field"><label for="c-msg">Message</label><textarea id="c-msg" placeholder="Tell us about your network, volumes and goals…" data-required></textarea><span class="sl-field-error"></span></div>
           <button class="sl-btn sl-btn-primary sl-btn-block" type="submit">Send Message <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <div class="sl-form-success"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Message sent. Our team will respond within 24 hours.</div>
+          <div class="sl-form-success" style="display:none !important;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>Message sent. Our team will respond within 24 hours.</div>
         </form>
       </div>
     </div>
   </div>
 </section>
 </main>
+
+<!-- =========================================================
+     ADDED SECTION 1 — CONTACT OPTIONS
+     ========================================================= -->
+<section class="sl-section sl-contact-added-section">
+  <div class="sl-container">
+    <div class="sl-section-head is-center">
+      <span class="sl-eyebrow" style="justify-content:center">How can we help?</span>
+      <h2 class="sl-h2">Choose the right <em>conversation.</em></h2>
+      <p class="sl-lead" style="margin-left:auto;margin-right:auto">Whether you are exploring Stackly, need support or want to build a partnership, we will connect you with the right team.</p>
+    </div>
+
+    <div class="sl-contact-added-grid">
+      <article class="sl-contact-added-card">
+        <span class="sl-contact-added-num">01</span>
+        <h3>Sales</h3>
+        <p>Talk through your network, shipment volumes and goals with our sales team.</p>
+        <a href="contact.html">Talk to Sales <span>→</span></a>
+      </article>
+
+      <article class="sl-contact-added-card">
+        <span class="sl-contact-added-num">02</span>
+        <h3>Support</h3>
+        <p>Find answers, troubleshoot an issue or connect with a support specialist.</p>
+        <a href="faq.html">Visit Help Center <span>→</span></a>
+      </article>
+
+      <article class="sl-contact-added-card">
+        <span class="sl-contact-added-num">03</span>
+        <h3>Partnerships</h3>
+        <p>Explore integrations, technology partnerships and opportunities to work together.</p>
+        <a href="contact.html">Start a Conversation <span>→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ADDED SECTION 2 — WHAT HAPPENS NEXT
+     ========================================================= -->
+<section class="sl-section sl-contact-added-section sl-contact-added-dark">
+  <div class="sl-container">
+    <div class="sl-section-head is-center">
+      <span class="sl-eyebrow" style="justify-content:center">What happens next</span>
+      <h2 class="sl-h2" style="color:#fff">Simple from <em>here.</em></h2>
+    </div>
+
+    <div class="sl-contact-next-grid">
+      <div class="sl-contact-next-item">
+        <span>01</span>
+        <div>
+          <h3>We receive your message</h3>
+          <p>Your request goes directly to the appropriate Stackly team.</p>
+        </div>
+      </div>
+
+      <div class="sl-contact-next-item">
+        <span>02</span>
+        <div>
+          <h3>We review your needs</h3>
+          <p>We look at the details you shared so the conversation starts with context.</p>
+        </div>
+      </div>
+
+      <div class="sl-contact-next-item">
+        <span>03</span>
+        <div>
+          <h3>We connect with you</h3>
+          <p>A team member follows up with the next steps and answers your questions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="sl-footer">
   <div class="sl-container">
     <div class="sl-footer-grid">
@@ -228,6 +742,68 @@
 <script src="js/main.js" defer></script>
 <script src="js/animations.js" defer></script>
 <script src="js/interactions.js" defer></script>
+
+
+<script>
+  /* Stackly Contact Form -> redirect to 404 after all required information is valid */
+  document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('stackly-contact-form');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const requiredFields = contactForm.querySelectorAll('[data-required]');
+      let isValid = true;
+
+      requiredFields.forEach(function (field) {
+        const value = (field.value || '').trim();
+        const fieldWrap = field.closest('.sl-field');
+        const error = fieldWrap ? fieldWrap.querySelector('.sl-field-error') : null;
+
+        field.classList.remove('is-error');
+        if (error) error.textContent = '';
+
+        if (!value) {
+          isValid = false;
+          field.classList.add('is-error');
+          if (error) error.textContent = 'This field is required.';
+          return;
+        }
+
+        if (field.type === 'email') {
+          const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+          if (!validEmail) {
+            isValid = false;
+            field.classList.add('is-error');
+            if (error) error.textContent = 'Please enter a valid email address.';
+          }
+        }
+      });
+
+      if (!isValid) return;
+
+      // ALL required information is valid.
+      // Go directly to the 404 page — no success message is shown.
+      window.location.href = '404.html';
+    });
+
+    contactForm.querySelectorAll('input, select, textarea').forEach(function (field) {
+      function clearError() {
+        if ((field.value || '').trim()) {
+          field.classList.remove('is-error');
+          const wrap = field.closest('.sl-field');
+          const error = wrap ? wrap.querySelector('.sl-field-error') : null;
+          if (error) error.textContent = '';
+        }
+      }
+
+      field.addEventListener('input', clearError);
+      field.addEventListener('change', clearError);
+    });
+  });
+</script>
 
 </body>
 </html>
