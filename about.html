@@ -1,968 +1,3418 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About Stackly — The Team Behind Smarter Supply Chains</title>
-<meta name="description" content="Meet Stackly: 12 years, 190+ countries, one mission — to make every supply chain self-driving.">
+
+<meta
+    name="description"
+    content="Meet Stackly: 12 years, 190+ countries, one mission — to make every supply chain self-driving."
+>
+
 <link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+>
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/pages.css">
 <link rel="stylesheet" href="css/mobile.css">
 
+
+<script>
+document.documentElement.classList.remove('no-js');
+</script>
+
+
 <style id="stackly-logo-adjustments">
-  /* Header + footer logo only — preloader is intentionally untouched */
-  .sl-header .sl-logo img,
-  .sl-footer .sl-logo img {
+
+/* =========================================================
+   HEADER + FOOTER LOGO
+========================================================= */
+
+.sl-header .sl-logo img,
+.sl-footer .sl-logo img {
+
     width: 112px !important;
+
     height: auto !important;
+
     max-width: none;
+
     display: block;
-    filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(1100%) hue-rotate(175deg) brightness(92%) contrast(92%);
-  }
 
-  .sl-header .sl-logo,
-  .sl-footer .sl-logo {
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(13%)
+        sepia(8%)
+        saturate(1100%)
+        hue-rotate(175deg)
+        brightness(92%)
+        contrast(92%);
+
+}
+
+
+.sl-header .sl-logo,
+.sl-footer .sl-logo {
+
     display: flex;
+
     align-items: center;
+
     flex-shrink: 0;
-  }
 
-  @media (max-width: 768px) {
+}
+
+
+@media (max-width: 768px) {
+
     .sl-header .sl-logo img,
     .sl-footer .sl-logo img {
-      width: 96px !important;
-      height: auto !important;
-    }
-  }
 
-  @media (max-width: 480px) {
+        width: 96px !important;
+
+        height: auto !important;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
     .sl-header .sl-logo img,
     .sl-footer .sl-logo img {
-      width: 90px !important;
+
+        width: 90px !important;
+
     }
-  }
+
+}
+
 </style>
 
-<script>document.documentElement.classList.remove('no-js')</script>
 
 <style id="stackly-mobile-responsiveness-fix">
+
 /* =========================================================
-   STACKLY — MOBILE RESPONSIVENESS ONLY
-   Desktop styles/design remain unchanged.
-   ========================================================= */
+   STACKLY — MOBILE RESPONSIVENESS
+========================================================= */
+
 @media (max-width: 768px) {
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow-x: hidden !important;
-  }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    min-width: 0;
-  }
+    html,
+    body {
 
-  body {
-    margin-left: 0;
-    margin-right: 0;
-  }
+        width: 100%;
 
-  main,
-  section,
-  header,
-  footer,
-  .sl-header,
-  .sl-footer,
-  .sl-section,
-  .sl-page-hero,
-  .sl-container {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+        max-width: 100%;
 
-  .sl-container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+        min-width: 0;
 
-  img,
-  svg,
-  video {
-    max-width: 100%;
-  }
+        overflow-x: hidden !important;
 
-  img {
-    height: auto;
-  }
+    }
 
-  /* ---------- Header: preserve existing design, prevent overflow ---------- */
-  .sl-header {
-    width: 100%;
-    max-width: 100%;
-    overflow: visible;
-  }
 
-  .sl-nav-pill {
-    width: calc(100% - 24px);
-    max-width: calc(100% - 24px);
-    min-width: 0;
-  }
+    *,
+    *::before,
+    *::after {
 
-  .sl-header nav {
-    min-width: 0;
-  }
+        box-sizing: border-box;
 
-  .sl-header-actions {
-    min-width: 0;
-    flex-shrink: 0;
-  }
+        min-width: 0;
 
-  .sl-burger {
-    flex-shrink: 0;
-  }
+    }
 
-  .sl-mobile-menu {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
 
-  .sl-mobile-link,
-  .sl-mobile-menu-foot,
-  .sl-mobile-menu-foot .sl-btn {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
+    body {
 
-  /* ---------- Hero ---------- */
-  .sl-page-hero,
-  .sl-page-hero-bg {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow: hidden;
-  }
+        margin-left: 0;
 
-  .sl-page-hero-bg img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+        margin-right: 0;
 
-  .sl-page-title,
-  .sl-page-hero .sl-lead {
-    width: 100%;
-    max-width: 100% !important;
-    overflow-wrap: anywhere;
-  }
+    }
 
-  .sl-page-title {
-    font-size: clamp(34px, 9vw, 52px);
-    line-height: 1.05;
-  }
 
-  /* ---------- Story: image above text on mobile ---------- */
-  .sl-story-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    gap: 32px;
-  }
+    main,
+    section,
+    header,
+    footer,
+    .sl-header,
+    .sl-footer,
+    .sl-section,
+    .sl-page-hero,
+    .sl-container {
 
-  .sl-story-grid > *,
-  .sl-story-media,
-  .sl-story-media + div {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    flex: 0 1 auto !important;
-  }
+        width: 100%;
 
-  .sl-story-media {
-    overflow: hidden;
-  }
+        max-width: 100%;
 
-  .sl-story-media img {
-    display: block;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: cover;
-  }
+        min-width: 0;
 
-  .sl-story-grid .sl-h2,
-  .sl-story-grid .sl-lead {
-    width: 100%;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+    }
 
-  .sl-h2 {
-    max-width: 100%;
-    font-size: clamp(30px, 8.5vw, 48px);
-    overflow-wrap: break-word;
-  }
 
-  /* ---------- Values / cards ---------- */
-  .sl-values-grid,
-  .sl-leaders-grid {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
+    .sl-container {
 
-  .sl-value-card,
-  .sl-leader-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box;
-  }
+        margin-left: auto;
 
-  .sl-value-card *,
-  .sl-leader-card * {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+        margin-right: auto;
 
-  /* ---------- Mission / Vision ---------- */
-  .sl-story-grid .sl-value-card {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+        padding-left: 20px;
 
-  .sl-story-grid .sl-value-card[style] {
-    padding: 28px !important;
-  }
+        padding-right: 20px;
 
-  /* ---------- Global stats ---------- */
-  .sl-network {
-    width: calc(100% - 32px) !important;
-    max-width: calc(100% - 32px) !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    border-radius: 28px !important;
-    overflow: hidden;
-  }
+    }
 
-  .sl-network .sl-container {
-    width: 100%;
-    max-width: 100%;
-  }
 
-  .sl-stats-band {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 22px 16px;
-  }
+    img,
+    svg,
+    video {
 
-  .sl-stats-band > div {
-    min-width: 0;
-    width: 100%;
-  }
+        max-width: 100%;
 
-  .sl-stats-band b,
-  .sl-stats-band span {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+    }
 
-  /* ---------- Technology ---------- */
-  .sl-sustain-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    gap: 32px;
-  }
 
-  .sl-sustain-grid > *,
-  .sl-sustain-media {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    flex: 0 1 auto !important;
-  }
+    img {
 
-  .sl-sustain-media {
-    overflow: hidden;
-  }
+        height: auto;
 
-  .sl-sustain-media img {
-    display: block;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
+    }
 
-  .sl-sustain-list,
-  .sl-sustain-item {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
 
-  .sl-sustain-item > div {
-    min-width: 0;
-    max-width: 100%;
-  }
+    /* HEADER */
 
-  /* ---------- Leadership ---------- */
-  .sl-leaders-grid {
-    gap: 18px;
-  }
+    .sl-header {
 
-  .sl-leader-card {
-    overflow: hidden;
-  }
+        width: 100%;
 
-  /* ---------- CTA ---------- */
-  .sl-cta,
-  .sl-cta-inner,
-  .sl-cta-bg {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+        max-width: 100%;
 
-  .sl-cta {
-    overflow: hidden;
-  }
+        overflow: visible;
 
-  .sl-cta-bg img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    }
 
-  .sl-cta-inner {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
-  .sl-cta-inner h2,
-  .sl-cta-inner p,
-  .sl-cta-inner .sl-btn {
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+    .sl-nav-pill {
 
-  .sl-cta-inner .sl-btn {
-    white-space: normal;
-    text-align: center;
-  }
+        width: calc(100% - 24px);
 
-  /* ---------- Footer ---------- */
-  .sl-footer {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
+        max-width: calc(100% - 24px);
 
-  .sl-footer-grid {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    gap: 30px;
-  }
+        min-width: 0;
 
-  .sl-footer-brand,
-  .sl-footer-col {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
+    }
 
-  .sl-footer-brand p,
-  .sl-footer-col a {
-    overflow-wrap: break-word;
-  }
 
-  .sl-footer-bar {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
+    .sl-header nav {
 
-  .sl-footer-bar > *,
-  .sl-footer-bar ul {
-    max-width: 100%;
-    min-width: 0;
-  }
+        min-width: 0;
 
-  .sl-footer-bar ul {
-    flex-wrap: wrap;
-  }
+    }
 
-  .sl-giant {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    font-size: clamp(48px, 18vw, 120px) !important;
-    line-height: .8;
-    white-space: nowrap;
-  }
 
-  /* ---------- Generic protection against desktop-width children ---------- */
-  .sl-section > *,
-  .sl-container > *,
-  .sl-section-head,
-  .sl-section-head > *,
-  .sl-lead,
-  .sl-eyebrow,
-  .sl-price-name {
-    max-width: 100%;
-    min-width: 0;
-  }
+    .sl-header-actions {
 
-  .sl-lead,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  a,
-  span {
-    overflow-wrap: break-word;
-  }
+        min-width: 0;
+
+        flex-shrink: 0;
+
+    }
+
+
+    .sl-burger {
+
+        flex-shrink: 0;
+
+    }
+
+
+    .sl-mobile-menu {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+
+        overflow-x: hidden;
+
+    }
+
+
+    .sl-mobile-link,
+    .sl-mobile-menu-foot,
+    .sl-mobile-menu-foot .sl-btn {
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* HERO */
+
+    .sl-page-hero,
+    .sl-page-hero-bg {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-page-hero-bg img {
+
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+    }
+
+
+    .sl-page-title,
+    .sl-page-hero .sl-lead {
+
+        width: 100%;
+
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere;
+
+    }
+
+
+    .sl-page-title {
+
+        font-size: clamp(34px, 9vw, 52px);
+
+        line-height: 1.05;
+
+    }
+
+
+    /* STORY */
+
+    .sl-story-grid {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        gap: 32px;
+
+    }
+
+
+    .sl-story-grid > *,
+    .sl-story-media,
+    .sl-story-media + div {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        flex: 0 1 auto !important;
+
+    }
+
+
+    .sl-story-media {
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-story-media img {
+
+        display: block;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        object-fit: cover;
+
+    }
+
+
+    .sl-story-grid .sl-h2,
+    .sl-story-grid .sl-lead {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    .sl-h2 {
+
+        max-width: 100%;
+
+        font-size: clamp(30px, 8.5vw, 48px);
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    /* VALUES */
+
+    .sl-values-grid,
+    .sl-leaders-grid {
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr) !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+    }
+
+
+    .sl-value-card,
+    .sl-leader-card {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        box-sizing: border-box;
+
+    }
+
+
+    .sl-value-card *,
+    .sl-leader-card * {
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    .sl-story-grid .sl-value-card {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+    }
+
+
+    .sl-story-grid .sl-value-card[style] {
+
+        padding: 28px !important;
+
+    }
+
+
+    /* NETWORK */
+
+    .sl-network {
+
+        width: calc(100% - 32px) !important;
+
+        max-width: calc(100% - 32px) !important;
+
+        margin-left: 16px !important;
+
+        margin-right: 16px !important;
+
+        border-radius: 28px !important;
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-network .sl-container {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .sl-stats-band {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 22px 16px;
+
+    }
+
+
+    .sl-stats-band > div {
+
+        min-width: 0;
+
+        width: 100%;
+
+    }
+
+
+    .sl-stats-band b,
+    .sl-stats-band span {
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    /* TECHNOLOGY */
+
+    .sl-sustain-grid {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        gap: 32px;
+
+    }
+
+
+    .sl-sustain-grid > *,
+    .sl-sustain-media {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        flex: 0 1 auto !important;
+
+    }
+
+
+    .sl-sustain-media {
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-sustain-media img {
+
+        display: block;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+
+    }
+
+
+    .sl-sustain-list,
+    .sl-sustain-item {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .sl-sustain-item > div {
+
+        min-width: 0;
+
+        max-width: 100%;
+
+    }
+
+
+    /* LEADERSHIP */
+
+    .sl-leaders-grid {
+
+        gap: 18px;
+
+    }
+
+
+    .sl-leader-card {
+
+        overflow: hidden;
+
+    }
+
+
+    /* CTA */
+
+    .sl-cta,
+    .sl-cta-inner,
+    .sl-cta-bg {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .sl-cta {
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-cta-bg img {
+
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+    }
+
+
+    .sl-cta-inner {
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+
+    }
+
+
+    .sl-cta-inner h2,
+    .sl-cta-inner p,
+    .sl-cta-inner .sl-btn {
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    .sl-cta-inner .sl-btn {
+
+        white-space: normal;
+
+        text-align: center;
+
+    }
+
+
+    /* FOOTER */
+
+    .sl-footer {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+    }
+
+
+    .sl-footer-grid {
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr) !important;
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        gap: 30px;
+
+    }
+
+
+    .sl-footer-brand,
+    .sl-footer-col {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .sl-footer-brand p,
+    .sl-footer-col a {
+
+        overflow-wrap: break-word;
+
+    }
+
+
+    .sl-footer-bar {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+
+    }
+
+
+    .sl-footer-bar > *,
+    .sl-footer-bar ul {
+
+        max-width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .sl-footer-bar ul {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .sl-giant {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        font-size: clamp(48px, 18vw, 120px) !important;
+
+        line-height: .8;
+
+        white-space: nowrap;
+
+    }
+
+
+    /* GENERIC */
+
+    .sl-section > *,
+    .sl-container > *,
+    .sl-section-head,
+    .sl-section-head > *,
+    .sl-lead,
+    .sl-eyebrow,
+    .sl-price-name {
+
+        max-width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .sl-lead,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    span {
+
+        overflow-wrap: break-word;
+
+    }
+
 }
+
 
 @media (max-width: 480px) {
-  .sl-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
-  .sl-page-title {
-    font-size: clamp(32px, 9.5vw, 44px);
-  }
+    .sl-container {
 
-  .sl-h2 {
-    font-size: clamp(29px, 8.5vw, 40px);
-  }
+        padding-left: 20px;
 
-  .sl-story-grid,
-  .sl-sustain-grid {
-    gap: 26px;
-  }
+        padding-right: 20px;
 
-  .sl-network {
-    margin-left: 12px !important;
-    margin-right: 12px !important;
-    width: calc(100% - 24px) !important;
-    max-width: calc(100% - 24px) !important;
-    border-radius: 24px !important;
-  }
+    }
 
-  .sl-stats-band {
-    grid-template-columns: minmax(0, 1fr) !important;
-  }
 
-  .sl-story-grid .sl-value-card[style] {
-    padding: 24px !important;
-  }
+    .sl-page-title {
+
+        font-size: clamp(32px, 9.5vw, 44px);
+
+    }
+
+
+    .sl-h2 {
+
+        font-size: clamp(29px, 8.5vw, 40px);
+
+    }
+
+
+    .sl-story-grid,
+    .sl-sustain-grid {
+
+        gap: 26px;
+
+    }
+
+
+    .sl-network {
+
+        margin-left: 12px !important;
+
+        margin-right: 12px !important;
+
+        width: calc(100% - 24px) !important;
+
+        max-width: calc(100% - 24px) !important;
+
+        border-radius: 24px !important;
+
+    }
+
+
+    .sl-stats-band {
+
+        grid-template-columns:
+            minmax(0, 1fr) !important;
+
+    }
+
+
+    .sl-story-grid .sl-value-card[style] {
+
+        padding: 24px !important;
+
+    }
+
 }
+
 
 @media (max-width: 359px) {
-  .sl-container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 
-  .sl-network {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    width: calc(100% - 20px) !important;
-    max-width: calc(100% - 20px) !important;
-  }
+    .sl-container {
 
-  .sl-cta-inner {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
+
+    .sl-network {
+
+        margin-left: 10px !important;
+
+        margin-right: 10px !important;
+
+        width: calc(100% - 20px) !important;
+
+        max-width: calc(100% - 20px) !important;
+
+    }
+
+
+    .sl-cta-inner {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
+    }
+
 }
-/* ================================
+
+
+/* =========================================================
    LEADERSHIP CARD ALIGNMENT
-   ================================ */
+========================================================= */
 
 .sl-leaders-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  align-items: stretch;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    align-items: stretch;
+
 }
+
 
 .sl-leader-card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-width: 0;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    min-width: 0;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
 }
 
-/* Same image area for every card */
+
 .sl-leader-image {
-  width: 100%;
-  height: 280px;
-  flex-shrink: 0;
-  overflow: hidden;
-  border-radius: inherit;
-  margin-bottom: 20px;
+
+    width: 100%;
+
+    height: 280px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: inherit;
+
+    margin-bottom: 20px;
+
 }
+
 
 .sl-leader-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: center;
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
 }
 
-/* Avatar stays aligned */
+
 .sl-leader-ava {
-  flex-shrink: 0;
-  margin-bottom: 12px;
+
+    flex-shrink: 0;
+
+    margin-bottom: 12px;
+
 }
 
-/* Names */
+
 .sl-leader-card h4 {
-  margin: 0 0 6px;
-  line-height: 1.2;
+
+    margin: 0 0 6px;
+
+    line-height: 1.2;
+
 }
 
-/* Job title */
+
 .sl-leader-card > span {
-  display: block;
-  margin-bottom: 14px;
-  line-height: 1.4;
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    line-height: 1.4;
+
 }
 
-/* Description gets consistent positioning */
+
 .sl-leader-card p {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.6;
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+    line-height: 1.6;
+
 }
 
-/* ================================
-   MOBILE
-   ================================ */
 
 @media (max-width: 768px) {
-  .sl-leaders-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
-  .sl-leader-card {
-    width: 100%;
-    max-width: 100%;
-  }
+    .sl-leaders-grid {
 
-  .sl-leader-image {
-    height: 280px;
-    width: 100%;
-    margin-bottom: 18px;
-  }
+        grid-template-columns: 1fr;
 
-  .sl-leader-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+        gap: 20px;
+
+    }
+
+
+    .sl-leader-card {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+
+    .sl-leader-image {
+
+        height: 280px;
+
+        width: 100%;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .sl-leader-image img {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+    }
+
 }
 
-/* Smaller phones */
+
 @media (max-width: 480px) {
-  .sl-leader-image {
-    height: 250px;
-  }
+
+    .sl-leader-image {
+
+        height: 250px;
+
+    }
+
 }
+
 </style>
 
-</head><body>
-<div class="sl-preloader" aria-hidden="true">
-  <div class="sl-preloader-logo"> <span class="sl-preloader-word"><span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span></span></div>
-  <div class="sl-preloader-tag">Supply Chain Management</div>
-  <div class="sl-preloader-bar"><i></i></div>
-  <div class="sl-preloader-pct">0%</div>
-</div>
-<div class="sl-veil" aria-hidden="true"></div>
-<header class="sl-header">
-  <div class="sl-nav-pill">
-    <a href="index.html" class="sl-logo" aria-label="Stackly home"><img src="img/stackly-logo.webp" alt="" width="34" height="34"></a>
-    <nav aria-label="Primary">
-      <ul class="sl-nav-links">
-        <li><a class="sl-nav-link" href="index.html">Home</a></li>
-        <li><a class="sl-nav-link" href="about.html">About</a></li>
-        <li class="sl-has-dropdown">
-          <a class="sl-nav-link" href="services.html">Services <svg class="sl-nav-caret" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
-          <div class="sl-dropdown">
-            <a href="services.html#freight"><span class="sl-dropdown-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 8h13v9H1zM14 11h4l3 3v3h-7z"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17" cy="18.5" r="1.8"/></svg></span><span>Global Freight<small>Ocean, air and land</small></span></a>
-            <a href="services.html#warehousing"><span class="sl-dropdown-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8M7 17h10"/></svg></span><span>Warehousing<small>Smart fulfillment</small></span></a>
-            <a href="services.html#inventory"><span class="sl-dropdown-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></span><span>Inventory<small>Real-time intelligence</small></span></a>
-            <a href="services.html#analytics"><span class="sl-dropdown-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><span>Analytics<small>End-to-end visibility</small></span></a>
-            <a href="services.html#lastmile"><span class="sl-dropdown-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span>Last-Mile<small>Fast local networks</small></span></a>
-          </div>
-        </li>
-        <li><a class="sl-nav-link" href="pricing.html">Pricing</a></li>
-        <li><a class="sl-nav-link" href="blog.html">Blog</a></li>
-        <li><a class="sl-nav-link" href="faq.html">FAQ</a></li>
-        <li><a class="sl-nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="sl-header-actions">
-      <a href="login.html" class="sl-btn sl-btn-primary sl-login-btn sl-btn-sm"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg><span class="sl-login-text">Login</span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <button class="sl-burger" aria-label="Open menu" aria-expanded="false" aria-controls="sl-mobile-menu"><span></span><span></span><span></span></button>
+
+<!-- =========================================================
+     STACKLY UNIQUE LOADER CSS
+     ========================================================= -->
+
+<style id="stackly-page-loader-css">
+
+.stackly-page-loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    z-index: 999999;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #111;
+
+    color: #fff;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: all;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
+
+}
+
+
+.stackly-loader-logo {
+
+    font-size: clamp(42px, 7vw, 72px);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+}
+
+
+.stackly-loader-word {
+
+    display: flex;
+
+}
+
+
+.stackly-loader-word span {
+
+    display: inline-block;
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    animation:
+        stacklyLoaderLetter
+        .5s
+        cubic-bezier(.22,1,.36,1)
+        forwards;
+
+}
+
+
+.stackly-loader-word span:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.stackly-loader-word span:nth-child(2) {
+    animation-delay: .10s;
+}
+
+.stackly-loader-word span:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.stackly-loader-word span:nth-child(4) {
+    animation-delay: .20s;
+}
+
+.stackly-loader-word span:nth-child(5) {
+    animation-delay: .25s;
+}
+
+.stackly-loader-word span:nth-child(6) {
+    animation-delay: .30s;
+}
+
+.stackly-loader-word span:nth-child(7) {
+    animation-delay: .35s;
+}
+
+
+@keyframes stacklyLoaderLetter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.stackly-loader-tag {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.6);
+
+    margin-bottom: 28px;
+
+    opacity: 0;
+
+    animation:
+        stacklyLoaderTag
+        .7s
+        .5s
+        ease
+        forwards;
+
+}
+
+
+@keyframes stacklyLoaderTag {
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.stackly-loader-progress {
+
+    width: min(280px,70vw);
+
+    height: 2px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    overflow: hidden;
+
+    margin-bottom: 12px;
+
+}
+
+
+.stackly-loader-progress i {
+
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #c8892f;
+
+    transition: width .1s linear;
+
+}
+
+
+.stackly-loader-percent {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.55);
+
+    min-width: 40px;
+
+    text-align: center;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .stackly-loader-logo {
+
+        font-size: 42px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .stackly-loader-tag {
+
+        font-size: 10px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .stackly-loader-progress {
+
+        width: 220px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     STACKLY UNIQUE LOADER
+========================================================= -->
+
+<div
+    class="stackly-page-loader"
+    id="stacklyPageLoader"
+    aria-hidden="true"
+>
+
+    <div class="stackly-loader-logo">
+
+        <span class="stackly-loader-word">
+
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>K</span>
+            <span>L</span>
+            <span>Y</span>
+
+        </span>
+
     </div>
-  </div>
-</header>
-<div class="sl-mobile-menu" id="sl-mobile-menu" aria-hidden="true">
-  <a class="sl-mobile-link" href="index.html"><small>01</small>Home</a>
-<a class="sl-mobile-link is-active" href="about.html" aria-current="page" style="color: #C9A27E !important;">
-  <small>02</small>About
-</a>  <a class="sl-mobile-link" href="services.html"><small>03</small>Services</a>
-  <a class="sl-mobile-link" href="pricing.html"><small>04</small>Pricing</a>
-  <a class="sl-mobile-link" href="blog.html"><small>05</small>Blog</a>
-  <a class="sl-mobile-link" href="faq.html"><small>06</small>FAQ</a>
-  <a class="sl-mobile-link" href="contact.html"><small>07</small>Contact</a>
-  <div class="sl-mobile-menu-foot">
-    <a href="login.html" class="sl-btn sl-btn-ghost">Login</a>
-    <a href="register.html" class="sl-btn sl-btn-gold">Get Started</a>
-  </div>
+
+
+    <div class="stackly-loader-tag">
+
+        Supply Chain Management
+
+    </div>
+
+
+    <div class="stackly-loader-progress">
+
+        <i id="stacklyLoaderProgressBar"></i>
+
+    </div>
+
+
+    <div
+        class="stackly-loader-percent"
+        id="stacklyLoaderPercent"
+    >
+        0%
+    </div>
+
 </div>
+
+
+<!-- Existing veil -->
+
+<div class="sl-veil" aria-hidden="true"></div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="sl-header">
+
+    <div class="sl-nav-pill">
+
+        <a
+            href="index.html"
+            class="sl-logo"
+            aria-label="Stackly home"
+        >
+
+            <img
+                src="img/stackly-logo.webp"
+                alt=""
+                width="34"
+                height="34"
+            >
+
+        </a>
+
+
+        <nav aria-label="Primary">
+
+            <ul class="sl-nav-links">
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+                </li>
+
+
+                <li class="sl-has-dropdown">
+
+                    <a
+                        class="sl-nav-link"
+                        href="services.html"
+                    >
+
+                        Services
+
+                        <svg
+                            class="sl-nav-caret"
+                            width="12"
+                            height="12"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.2"
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <path d="m6 9 6 6 6-6"/>
+
+                        </svg>
+
+                    </a>
+
+
+                    <div class="sl-dropdown">
+
+                        <a href="services.html#freight">
+
+                            <span class="sl-dropdown-icon">
+
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M1 8h13v9H1zM14 11h4l3 3v3h-7z"/>
+
+                                    <circle
+                                        cx="6"
+                                        cy="18.5"
+                                        r="1.8"
+                                    />
+
+                                    <circle
+                                        cx="17"
+                                        cy="18.5"
+                                        r="1.8"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+                            <span>
+                                Global Freight
+                                <small>Ocean, air and land</small>
+                            </span>
+
+                        </a>
+
+
+                        <a href="services.html#warehousing">
+
+                            <span class="sl-dropdown-icon">
+
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M3 21V9l9-6 9 6v12"/>
+
+                                    <path d="M7 21v-8h10v8M7 17h10"/>
+
+                                </svg>
+
+                            </span>
+
+                            <span>
+                                Warehousing
+                                <small>Smart fulfillment</small>
+                            </span>
+
+                        </a>
+
+
+                        <a href="services.html#inventory">
+
+                            <span class="sl-dropdown-icon">
+
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/>
+
+                                    <path d="M3 7l9 5 9-5M12 12v10"/>
+
+                                </svg>
+
+                            </span>
+
+                            <span>
+                                Inventory
+                                <small>Real-time intelligence</small>
+                            </span>
+
+                        </a>
+
+
+                        <a href="services.html#analytics">
+
+                            <span class="sl-dropdown-icon">
+
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>
+
+                                </svg>
+
+                            </span>
+
+                            <span>
+                                Analytics
+                                <small>End-to-end visibility</small>
+                            </span>
+
+                        </a>
+
+
+                        <a href="services.html#lastmile">
+
+                            <span class="sl-dropdown-icon">
+
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/>
+
+                                    <circle
+                                        cx="12"
+                                        cy="10"
+                                        r="2.6"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+                            <span>
+                                Last-Mile
+                                <small>Fast local networks</small>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="pricing.html"
+                    >
+                        Pricing
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="blog.html"
+                    >
+                        Blog
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="faq.html"
+                    >
+                        FAQ
+                    </a>
+                </li>
+
+
+                <li>
+                    <a
+                        class="sl-nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="sl-header-actions">
+
+            <a
+                href="login.html"
+                class="sl-btn sl-btn-primary sl-login-btn sl-btn-sm"
+            >
+
+                <svg
+                    width="15"
+                    height="15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="8"
+                        r="4"
+                    />
+
+                    <path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/>
+
+                </svg>
+
+                <span class="sl-login-text">
+                    Login
+                </span>
+
+                <svg
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+
+                </svg>
+
+            </a>
+
+
+            <button
+                class="sl-burger"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="sl-mobile-menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     MOBILE MENU
+========================================================= -->
+
+<div
+    class="sl-mobile-menu"
+    id="sl-mobile-menu"
+    aria-hidden="true"
+>
+
+    <a
+        class="sl-mobile-link"
+        href="index.html"
+    >
+        <small>01</small>Home
+    </a>
+
+
+    <a
+        class="sl-mobile-link is-active"
+        href="about.html"
+        aria-current="page"
+        style="color:#C9A27E !important;"
+    >
+        <small>02</small>About
+    </a>
+
+
+    <a
+        class="sl-mobile-link"
+        href="services.html"
+    >
+        <small>03</small>Services
+    </a>
+
+
+    <a
+        class="sl-mobile-link"
+        href="pricing.html"
+    >
+        <small>04</small>Pricing
+    </a>
+
+
+    <a
+        class="sl-mobile-link"
+        href="blog.html"
+    >
+        <small>05</small>Blog
+    </a>
+
+
+    <a
+        class="sl-mobile-link"
+        href="faq.html"
+    >
+        <small>06</small>FAQ
+    </a>
+
+
+    <a
+        class="sl-mobile-link"
+        href="contact.html"
+    >
+        <small>07</small>Contact
+    </a>
+
+
+    <div class="sl-mobile-menu-foot">
+
+        <a
+            href="login.html"
+            class="sl-btn sl-btn-ghost"
+        >
+            Login
+        </a>
+
+
+        <a
+            href="register.html"
+            class="sl-btn sl-btn-gold"
+        >
+            Get Started
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
 <main>
+
+
+<!-- HERO -->
+
 <section class="sl-page-hero is-image">
-  <div class="sl-page-hero-bg"><img src="img/about-hero.webp" alt="Container cranes silhouetted against a sunset sky" fetchpriority="high"></div>
-  <div class="sl-container" style="padding-bottom:70px">
-    <p class="sl-crumbs"><a href="index.html">Home</a> / About</p>
-    <span class="sl-eyebrow">About Stackly</span>
-    <h1 class="sl-page-title">We build the nervous system<br>of <em class="sl-gold-text">global trade.</em></h1>
-    <p class="sl-lead" style="color:rgba(255,255,255,.7);max-width:52ch">From a two-person garage startup to a platform moving billions in cargo — this is the story of Stackly.</p>
-  </div>
+
+    <div class="sl-page-hero-bg">
+
+        <img
+            src="img/about-hero.webp"
+            alt="Container cranes silhouetted against a sunset sky"
+            fetchpriority="high"
+        >
+
+    </div>
+
+
+    <div
+        class="sl-container"
+        style="padding-bottom:70px"
+    >
+
+        <p class="sl-crumbs">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            / About
+
+        </p>
+
+
+        <span class="sl-eyebrow">
+            About Stackly
+        </span>
+
+
+        <h1 class="sl-page-title">
+
+            We build the nervous system
+            <br>
+            of
+            <em class="sl-gold-text">
+                global trade.
+            </em>
+
+        </h1>
+
+
+        <p
+            class="sl-lead"
+            style="color:rgba(255,255,255,.7);max-width:52ch"
+        >
+
+            From a two-person garage startup to a platform moving
+            billions in cargo — this is the story of Stackly.
+
+        </p>
+
+    </div>
+
 </section>
+
+
+<!-- STORY -->
 
 <section class="sl-section">
-  <div class="sl-container">
-    <div class="sl-story-grid">
-      <div class="sl-story-media" data-aos="fade-right">
-        <img src="img/team.webp" alt="Warehouse operator moving inventory with a forklift" loading="lazy">
-        <div class="sl-story-years"><b data-count="12" data-suffix="+">0</b><span>Years Moving</span></div>
-      </div>
-      <div>
-        <span class="sl-eyebrow">Our Story</span>
-        <h2 class="sl-h2">Born at a dock, <em>built for the world.</em></h2>
-        <p class="sl-lead" style="margin-bottom:18px">Stackly started in 2014 when two freight planners got tired of rebuilding the same spreadsheet every morning. What began as an ETA calculator is now an operating system for 5,000+ businesses.</p>
-        <p class="sl-lead" style="margin-bottom:18px">Today our network touches 340 ports, 190 countries and over 24,000 shipments a day — yet the mission hasn't changed: make global logistics feel effortless.</p>
-        <p class="sl-lead">We are engineers, planners and former dock workers, united by one belief — the flow of goods should never be the bottleneck of ambition.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="sl-section" style="padding-top:0">
-  <div class="sl-container">
-    <div class="sl-values-grid">
-      <article class="sl-value-card sl-spotlight" data-aos="fade-up"><div class="sl-solution-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.6 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.6-4-9s1.3-6.4 4-9Z"/></svg></div><h3>Relentless Reliability</h3><p>We treat every shipment like it carries something irreplaceable. 98% on-time isn't a slogan — it's an engineering target.</p></article>
-      <article class="sl-value-card sl-spotlight" data-aos="fade-up" data-aos-delay="80"><div class="sl-solution-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2.4"/></svg></div><h3>Intelligence First</h3><p>Every feature starts with a question: what will the AI see before a human can? Prediction beats reaction, every time.</p></article>
-      <article class="sl-value-card sl-spotlight" data-aos="fade-up" data-aos-delay="160"><div class="sl-solution-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-5 4-9 16-9 0 12-4 16-9 16Z"/><path d="M4 21c4-4 7-7 10-10"/></svg></div><h3>Sustainable by Default</h3><p>Logistics moves 8% of global emissions. We build the tools that shrink that number — without shrinking your margins.</p></article>
-    </div>
-  </div>
-</section>
+    <div class="sl-container">
 
-<section class="sl-section" style="padding-top:0">
-  <div class="sl-container">
-    <div class="sl-section-head"><span class="sl-eyebrow">Mission &amp; Vision</span><h2 class="sl-h2">What drives us <em>every day.</em></h2></div>
-    <div class="sl-story-grid">
-      <div class="sl-value-card" style="padding:40px" data-aos="fade-right">
-        <span class="sl-price-name">Our Mission</span>
-        <h3 style="font-size:24px;font-weight:800;margin:14px 0 12px">Make every supply chain self-driving.</h3>
-        <p class="sl-lead">We exist so that no business ever loses a customer because a container was late. Planning, sourcing, moving, tracking, delivering — all of it on autopilot, with humans in command.</p>
-      </div>
-      <div class="sl-value-card" style="padding:40px" data-aos="fade-left">
-        <span class="sl-price-name">Our Vision</span>
-        <h3 style="font-size:24px;font-weight:800;margin:14px 0 12px">A world where distance costs nothing.</h3>
-        <p class="sl-lead">We imagine a future where a maker in Nairobi competes on equal footing with one in New York — because logistics simply works, silently, invisibly, everywhere.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="sl-story-grid">
 
-<section class="sl-section sl-network sl-grain" style="border-radius:40px;margin:0 max(16px,2vw)">
-  <div class="sl-container">
-    <div class="sl-section-head is-center" style="margin-bottom:0">
-      <span class="sl-eyebrow" style="justify-content:center;color:var(--sl-gold-light)">Global Presence</span>
-      <h2 class="sl-h2">Wherever cargo moves, <em>we're there.</em></h2>
-    </div>
-    <div class="sl-stats-band" style="background:transparent;padding-bottom:0;margin-top:50px">
-      <div><b data-count="190" data-suffix="+">0</b><span>Countries served</span></div>
-      <div><b data-count="340" data-suffix="+">0</b><span>Ports connected</span></div>
-      <div><b data-count="26">0</b><span>Regional offices</span></div>
-      <div><b data-count="1400" data-suffix="+">0</b><span>Stacklies worldwide</span></div>
-    </div>
-  </div>
-</section>
 
-<section class="sl-section" aria-label="Technology">
-  <div class="sl-container">
-    <div class="sl-sustain-grid">
-      <div>
-        <span class="sl-eyebrow">Our Technology</span>
-        <h2 class="sl-h2">Infrastructure built like <em>critical infrastructure.</em></h2>
-        <div class="sl-sustain-list">
-          <div class="sl-sustain-item"><span class="sl-check"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Real-Time Event Engine</h4><p>12,000+ events per second processed across AIS, GPS, EDI and IoT feeds.</p></div></div>
-          <div class="sl-sustain-item"><span class="sl-check"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Predictive AI Models</h4><p>Trained on a decade of lane data, refreshed every 15 minutes for live accuracy.</p></div></div>
-          <div class="sl-sustain-item"><span class="sl-check"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Security &amp; Compliance</h4><p>SOC 2 Type II, ISO 27001, GDPR-ready with region-pinned data residency.</p></div></div>
-          <div class="sl-sustain-item"><span class="sl-check"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg></span><div><h4>Open API Platform</h4><p>200+ pre-built integrations and a REST API that developers actually enjoy.</p></div></div>
-        </div>
-      </div>
-      <div class="sl-sustain-media" data-aos="fade-left" data-clip-reveal>
-        <img src="img/logistics.webp" alt="Aerial view of container terminal operations" loading="lazy">
-        <div class="sl-sustain-badge"><b data-count="99" data-suffix=".99%">0</b><span>Platform uptime, trailing 12 months</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="sl-section" id="leadership" style="padding-top:20px" aria-label="Leadership">
-  <div class="sl-container">
+            <div
+                class="sl-story-media"
+                data-aos="fade-right"
+            >
 
-    <div class="sl-section-head is-center">
-      <span class="sl-eyebrow" style="justify-content:center">Leadership</span>
-      <h2 class="sl-h2">The people behind <em>the platform.</em></h2>
-      <p class="sl-lead" style="text-align:center">
-        Demo profiles for presentation purposes.
-      </p>
-    </div>
+                <img
+                    src="img/team.webp"
+                    alt="Warehouse operator moving inventory with a forklift"
+                    loading="lazy"
+                >
 
-    <div class="sl-leaders-grid">
 
-      <!-- Maya Chen -->
-      <article class="sl-leader-card sl-spotlight"
-        data-aos="fade-up"
-        data-aos-delay="0">
+                <div class="sl-story-years">
 
-        <div class="sl-leader-image">
-          <img src="img/ppl2.webp"
-               alt="Maya Chen"
-               loading="lazy">
+                    <b
+                        data-count="12"
+                        data-suffix="+"
+                    >
+                        0
+                    </b>
+
+                    <span>
+                        Years Moving
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span class="sl-eyebrow">
+                    Our Story
+                </span>
+
+
+                <h2 class="sl-h2">
+                    Born at a dock,
+                    <em>built for the world.</em>
+                </h2>
+
+
+                <p
+                    class="sl-lead"
+                    style="margin-bottom:18px"
+                >
+                    Stackly started in 2014 when two freight planners
+                    got tired of rebuilding the same spreadsheet every
+                    morning. What began as an ETA calculator is now an
+                    operating system for 5,000+ businesses.
+                </p>
+
+
+                <p
+                    class="sl-lead"
+                    style="margin-bottom:18px"
+                >
+                    Today our network touches 340 ports, 190 countries
+                    and over 24,000 shipments a day — yet the mission
+                    hasn't changed: make global logistics feel effortless.
+                </p>
+
+
+                <p class="sl-lead">
+                    We are engineers, planners and former dock workers,
+                    united by one belief — the flow of goods should never
+                    be the bottleneck of ambition.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="sl-leader-ava">MC</div>
-
-        <h4>Maya Chen</h4>
-        <span>Chief Executive Officer</span>
-
-        <p>
-          Former VP of Global Logistics at a Fortune 100 retailer.
-          Believes supply chains should be boring — in the best way.
-        </p>
-
-      </article>
-
-      <!-- Jonas Richter -->
-      <article class="sl-leader-card sl-spotlight"
-        data-aos="fade-up"
-        data-aos-delay="80">
-
-        <div class="sl-leader-image">
-          <img src="img/ppl3.webp"
-               alt="Jonas Richter"
-               loading="lazy">
-        </div>
-
-        <div class="sl-leader-ava">JR</div>
-
-        <h4>Jonas Richter</h4>
-        <span>Chief Technology Officer</span>
-
-        <p>
-          Built planetary-scale routing systems. Now applies them
-          to the physical world of freight.
-        </p>
-
-      </article>
-
-      <!-- Amara Osei -->
-      <article class="sl-leader-card sl-spotlight"
-        data-aos="fade-up"
-        data-aos-delay="160">
-
-        <div class="sl-leader-image">
-          <img src="img/ppl4.webp"
-               alt="Amara Osei"
-               loading="lazy">
-        </div>
-
-        <div class="sl-leader-ava">AO</div>
-
-        <h4>Amara Osei</h4>
-        <span>Chief Operations Officer</span>
-
-        <p>
-          Two decades across ports, rails and warehouses on four
-          continents.
-        </p>
-
-      </article>
-
-      <!-- Lucas Torres -->
-      <article class="sl-leader-card sl-spotlight"
-        data-aos="fade-up"
-        data-aos-delay="240">
-
-        <div class="sl-leader-image">
-          <img src="img/ppl5.webp"
-               alt="Lucas Torres"
-               loading="lazy">
-        </div>
-
-        <div class="sl-leader-ava">LT</div>
-
-        <h4>Lucas Torres</h4>
-        <span>Chief Product Officer</span>
-
-        <p>
-          Obsessed with turning supply chain complexity into one
-          calm, clear interface.
-        </p>
-
-      </article>
-
     </div>
-  </div>
+
 </section>
 
 
+<!-- VALUES -->
 
-<section class="sl-section" style="padding-bottom:0">
-  <div class="sl-cta">
-    <div class="sl-cta-bg"><img src="img/night.webp" alt="" loading="lazy"></div>
-    <div class="sl-cta-inner">
-      <span class="sl-eyebrow" style="justify-content:center;color:var(--sl-gold-light)">Ready when you are</span>
-      <h2 data-aos="fade-up">Want to move the world with us?</h2>
-      <p data-aos="fade-up" data-aos-delay="100">We are hiring across engineering, operations and design. Join 1,400 Stacklies building the future of trade.</p>
-      <a href="register.html" class="sl-btn sl-btn-light sl-magnetic" data-aos="fade-up" data-aos-delay="200">Start Building Your Smarter Supply Chain <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<section
+    class="sl-section"
+    style="padding-top:0"
+>
+
+    <div class="sl-container">
+
+        <div class="sl-values-grid">
+
+
+            <article
+                class="sl-value-card sl-spotlight"
+                data-aos="fade-up"
+            >
+
+                <div class="sl-solution-ico">
+
+                    <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="9"
+                        />
+
+                        <path
+                            d="M3 12h18M12 3c2.7 2.6 4 5.6 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.6-4-9s1.3-6.4 4-9Z"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    Relentless Reliability
+                </h3>
+
+
+                <p>
+                    We treat every shipment like it carries something
+                    irreplaceable. 98% on-time isn't a slogan — it's
+                    an engineering target.
+                </p>
+
+            </article>
+
+
+            <article
+                class="sl-value-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="80"
+            >
+
+                <div class="sl-solution-ico">
+
+                    <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="5"
+                            y="5"
+                            width="14"
+                            height="14"
+                            rx="3"
+                        />
+
+                        <path
+                            d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"
+                        />
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="2.4"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    Intelligence First
+                </h3>
+
+
+                <p>
+                    Every feature starts with a question: what will the
+                    AI see before a human can? Prediction beats reaction,
+                    every time.
+                </p>
+
+            </article>
+
+
+            <article
+                class="sl-value-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="160"
+            >
+
+                <div class="sl-solution-ico">
+
+                    <svg
+                        width="20"
+                        height="20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M11 20A7 7 0 0 1 4 13c0-5 4-9 16-9 0 12-4 16-9 16Z"
+                        />
+
+                        <path
+                            d="M4 21c4-4 7-7 10-10"
+                        />
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    Sustainable by Default
+                </h3>
+
+
+                <p>
+                    Logistics moves 8% of global emissions. We build
+                    the tools that shrink that number — without shrinking
+                    your margins.
+                </p>
+
+            </article>
+
+
+        </div>
+
     </div>
-  </div>
+
 </section>
+
+
+<!-- MISSION / VISION -->
+
+<section
+    class="sl-section"
+    style="padding-top:0"
+>
+
+    <div class="sl-container">
+
+
+        <div class="sl-section-head">
+
+            <span class="sl-eyebrow">
+                Mission &amp; Vision
+            </span>
+
+            <h2 class="sl-h2">
+                What drives us
+                <em>every day.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="sl-story-grid">
+
+
+            <div
+                class="sl-value-card"
+                style="padding:40px"
+                data-aos="fade-right"
+            >
+
+                <span class="sl-price-name">
+                    Our Mission
+                </span>
+
+
+                <h3
+                    style="
+                        font-size:24px;
+                        font-weight:800;
+                        margin:14px 0 12px
+                    "
+                >
+                    Make every supply chain self-driving.
+                </h3>
+
+
+                <p class="sl-lead">
+                    We exist so that no business ever loses a customer
+                    because a container was late. Planning, sourcing,
+                    moving, tracking, delivering — all of it on autopilot,
+                    with humans in command.
+                </p>
+
+            </div>
+
+
+            <div
+                class="sl-value-card"
+                style="padding:40px"
+                data-aos="fade-left"
+            >
+
+                <span class="sl-price-name">
+                    Our Vision
+                </span>
+
+
+                <h3
+                    style="
+                        font-size:24px;
+                        font-weight:800;
+                        margin:14px 0 12px
+                    "
+                >
+                    A world where distance costs nothing.
+                </h3>
+
+
+                <p class="sl-lead">
+                    We imagine a future where a maker in Nairobi competes
+                    on equal footing with one in New York — because logistics
+                    simply works, silently, invisibly, everywhere.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GLOBAL PRESENCE -->
+
+<section
+    class="sl-section sl-network sl-grain"
+    style="border-radius:40px;margin:0 max(16px,2vw)"
+>
+
+    <div class="sl-container">
+
+        <div
+            class="sl-section-head is-center"
+            style="margin-bottom:0"
+        >
+
+            <span
+                class="sl-eyebrow"
+                style="
+                    justify-content:center;
+                    color:var(--sl-gold-light)
+                "
+            >
+                Global Presence
+            </span>
+
+
+            <h2 class="sl-h2">
+                Wherever cargo moves,
+                <em>we're there.</em>
+            </h2>
+
+        </div>
+
+
+        <div
+            class="sl-stats-band"
+            style="
+                background:transparent;
+                padding-bottom:0;
+                margin-top:50px
+            "
+        >
+
+            <div>
+
+                <b
+                    data-count="190"
+                    data-suffix="+"
+                >
+                    0
+                </b>
+
+                <span>
+                    Countries served
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <b
+                    data-count="340"
+                    data-suffix="+"
+                >
+                    0
+                </b>
+
+                <span>
+                    Ports connected
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <b data-count="26">
+                    0
+                </b>
+
+                <span>
+                    Regional offices
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <b
+                    data-count="1400"
+                    data-suffix="+"
+                >
+                    0
+                </b>
+
+                <span>
+                    Stacklies worldwide
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section
+    class="sl-section"
+    aria-label="Technology"
+>
+
+    <div class="sl-container">
+
+        <div class="sl-sustain-grid">
+
+
+            <div>
+
+                <span class="sl-eyebrow">
+                    Our Technology
+                </span>
+
+
+                <h2 class="sl-h2">
+                    Infrastructure built like
+                    <em>critical infrastructure.</em>
+                </h2>
+
+
+                <div class="sl-sustain-list">
+
+
+                    <div class="sl-sustain-item">
+
+                        <span class="sl-check">
+
+                            <svg
+                                width="13"
+                                height="13"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 12.5l5 5L20 6.5"
+                                />
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Real-Time Event Engine
+                            </h4>
+
+                            <p>
+                                12,000+ events per second processed
+                                across AIS, GPS, EDI and IoT feeds.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sl-sustain-item">
+
+                        <span class="sl-check">
+
+                            <svg
+                                width="13"
+                                height="13"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 12.5l5 5L20 6.5"
+                                />
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Predictive AI Models
+                            </h4>
+
+                            <p>
+                                Trained on a decade of lane data,
+                                refreshed every 15 minutes for live accuracy.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sl-sustain-item">
+
+                        <span class="sl-check">
+
+                            <svg
+                                width="13"
+                                height="13"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 12.5l5 5L20 6.5"
+                                />
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Security &amp; Compliance
+                            </h4>
+
+                            <p>
+                                SOC 2 Type II, ISO 27001, GDPR-ready
+                                with region-pinned data residency.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sl-sustain-item">
+
+                        <span class="sl-check">
+
+                            <svg
+                                width="13"
+                                height="13"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.4"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 12.5l5 5L20 6.5"
+                                />
+
+                            </svg>
+
+                        </span>
+
+
+                        <div>
+
+                            <h4>
+                                Open API Platform
+                            </h4>
+
+                            <p>
+                                200+ pre-built integrations and a REST
+                                API that developers actually enjoy.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="sl-sustain-media"
+                data-aos="fade-left"
+                data-clip-reveal
+            >
+
+                <img
+                    src="img/logistics.webp"
+                    alt="Aerial view of container terminal operations"
+                    loading="lazy"
+                >
+
+
+                <div class="sl-sustain-badge">
+
+                    <b
+                        data-count="99"
+                        data-suffix=".99%"
+                    >
+                        0
+                    </b>
+
+                    <span>
+                        Platform uptime, trailing 12 months
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section
+    class="sl-section"
+    id="leadership"
+    style="padding-top:20px"
+    aria-label="Leadership"
+>
+
+    <div class="sl-container">
+
+
+        <div class="sl-section-head is-center">
+
+            <span
+                class="sl-eyebrow"
+                style="justify-content:center"
+            >
+                Leadership
+            </span>
+
+
+            <h2 class="sl-h2">
+                The people behind
+                <em>the platform.</em>
+            </h2>
+
+
+            <p
+                class="sl-lead"
+                style="text-align:center"
+            >
+                Demo profiles for presentation purposes.
+            </p>
+
+        </div>
+
+
+        <div class="sl-leaders-grid">
+
+
+            <!-- MAYA -->
+
+            <article
+                class="sl-leader-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="0"
+            >
+
+                <div class="sl-leader-image">
+
+                    <img
+                        src="img/ppl2.webp"
+                        alt="Maya Chen"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="sl-leader-ava">
+                    MC
+                </div>
+
+
+                <h4>
+                    Maya Chen
+                </h4>
+
+
+                <span>
+                    Chief Executive Officer
+                </span>
+
+
+                <p>
+                    Former VP of Global Logistics at a Fortune 100
+                    retailer. Believes supply chains should be boring —
+                    in the best way.
+                </p>
+
+            </article>
+
+
+            <!-- JONAS -->
+
+            <article
+                class="sl-leader-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="80"
+            >
+
+                <div class="sl-leader-image">
+
+                    <img
+                        src="img/ppl3.webp"
+                        alt="Jonas Richter"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="sl-leader-ava">
+                    JR
+                </div>
+
+
+                <h4>
+                    Jonas Richter
+                </h4>
+
+
+                <span>
+                    Chief Technology Officer
+                </span>
+
+
+                <p>
+                    Built planetary-scale routing systems. Now applies
+                    them to the physical world of freight.
+                </p>
+
+            </article>
+
+
+            <!-- AMARA -->
+
+            <article
+                class="sl-leader-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="160"
+            >
+
+                <div class="sl-leader-image">
+
+                    <img
+                        src="img/ppl4.webp"
+                        alt="Amara Osei"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="sl-leader-ava">
+                    AO
+                </div>
+
+
+                <h4>
+                    Amara Osei
+                </h4>
+
+
+                <span>
+                    Chief Operations Officer
+                </span>
+
+
+                <p>
+                    Two decades across ports, rails and warehouses on
+                    four continents.
+                </p>
+
+            </article>
+
+
+            <!-- LUCAS -->
+
+            <article
+                class="sl-leader-card sl-spotlight"
+                data-aos="fade-up"
+                data-aos-delay="240"
+            >
+
+                <div class="sl-leader-image">
+
+                    <img
+                        src="img/ppl5.webp"
+                        alt="Lucas Torres"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <div class="sl-leader-ava">
+                    LT
+                </div>
+
+
+                <h4>
+                    Lucas Torres
+                </h4>
+
+
+                <span>
+                    Chief Product Officer
+                </span>
+
+
+                <p>
+                    Obsessed with turning supply chain complexity into
+                    one calm, clear interface.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section
+    class="sl-section"
+    style="padding-bottom:0"
+>
+
+    <div class="sl-cta">
+
+        <div class="sl-cta-bg">
+
+            <img
+                src="img/night.webp"
+                alt=""
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="sl-cta-inner">
+
+            <span
+                class="sl-eyebrow"
+                style="
+                    justify-content:center;
+                    color:var(--sl-gold-light)
+                "
+            >
+                Ready when you are
+            </span>
+
+
+            <h2 data-aos="fade-up">
+                Want to move the world with us?
+            </h2>
+
+
+            <p
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                We are hiring across engineering, operations and design.
+                Join 1,400 Stacklies building the future of trade.
+            </p>
+
+
+            <a
+                href="register.html"
+                class="sl-btn sl-btn-light sl-magnetic"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+
+                Start Building Your Smarter Supply Chain
+
+                <svg
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path d="M5 12h14M13 6l6 6-6 6"/>
+
+                </svg>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 </main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer class="sl-footer">
-  <div class="sl-container">
-    <div class="sl-footer-grid">
-      <div class="sl-footer-brand">
-<a href="index.html" class="sl-logo">
-  <img src="img/stackly-logo.webp" alt="" width="34" height="34"
-       style="filter: brightness(0) invert(1);">
-</a>        <p>The intelligent supply chain operating system for businesses that move the world — from first mile to final delivery.</p>
-        <div class="sl-socials">
-          <a href="404.html" aria-label="Social profile" data-demo-social><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.3 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1 2h6.5l4.4 5.8L18.9 2Zm-1.1 18h1.7L7.4 3.9H5.5L17.8 20Z"/></svg></a>
-          <a href="404.html" aria-label="Social profile" data-demo-social><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.2 1.4-2.2 2.9V21h-4V9Z"/></svg></a>
-          <a href="404.html" aria-label="Social profile" data-demo-social><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.4-3.4-1.4-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg></a>
-          <a href="404.html" aria-label="Social profile" data-demo-social><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm8 7.2 5.5-3.2H6.5L12 11.2Zm0 2.1L5.6 9.1v6.6l6.4-3.7 6.4 3.7V9.1L12 13.3Z"/></svg></a>
+
+    <div class="sl-container">
+
+        <div class="sl-footer-grid">
+
+
+            <div class="sl-footer-brand">
+
+                <a
+                    href="index.html"
+                    class="sl-logo"
+                >
+
+                    <img
+                        src="img/stackly-logo.webp"
+                        alt=""
+                        width="34"
+                        height="34"
+                        style="filter:brightness(0) invert(1);"
+                    >
+
+                </a>
+
+
+                <p>
+                    The intelligent supply chain operating system for
+                    businesses that move the world — from first mile
+                    to final delivery.
+                </p>
+
+
+                <div class="sl-socials">
+
+                    <a
+                        href="404.html"
+                        aria-label="Social profile"
+                        data-demo-social
+                    >
+                        Social
+                    </a>
+
+                    <a
+                        href="404.html"
+                        aria-label="Social profile"
+                        data-demo-social
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="404.html"
+                        aria-label="Social profile"
+                        data-demo-social
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="404.html"
+                        aria-label="Social profile"
+                        data-demo-social
+                    >
+                        Email
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="sl-footer-col">
+
+                <h5>
+                    Solutions
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="404.html">
+                            Global Freight
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Warehousing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Inventory Intelligence
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Supply Chain Analytics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Last-Mile Delivery
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="sl-footer-col">
+
+                <h5>
+                    Company
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="pricing.html">
+                            Pricing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">
+                            Faq
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="sl-footer-col">
+
+                <h5>
+                    Resources
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="404.html">
+                            Blog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Help Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Live Demo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Get Started
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="sl-footer-col">
+
+                <h5>
+                    Support
+                </h5>
+
+                <ul>
+
+                    <li>
+                        <a href="404.html">
+                            FAQ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Support Center
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Terms of Service
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="404.html">
+                            Security
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
-      </div>
-      <div class="sl-footer-col">
-        <h5>Solutions</h5>
-        <ul>
-          <li><a href="404.html">Global Freight</a></li>
-          <li><a href="404.html">Warehousing</a></li>
-          <li><a href="404.html">Inventory Intelligence</a></li>
-          <li><a href="404.html">Supply Chain Analytics</a></li>
-          <li><a href="404.html">Last-Mile Delivery</a></li>
-        </ul>
-      </div>
-      <div class="sl-footer-col">
-        <h5>Company</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Service</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="faq.html">Faq</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="sl-footer-col">
-        <h5>Resources</h5>
-        <ul>
-          <li><a href="404.html">Blog</a></li>
-          <li><a href="404.html">Help Center</a></li>
-          <li><a href="404.html">Live Demo</a></li>
-          <li><a href="404.html">Get Started</a></li>
-        </ul>
-      </div>
-      <div class="sl-footer-col">
-        <h5>Support</h5>
-        <ul>
-          <li><a href="404.html">FAQ</a></li>
-          <li><a href="404.html">Support Center</a></li>
-          <li><a href="404.html">Privacy Policy</a></li>
-          <li><a href="404.html">Terms of Service</a></li>
-          <li><a href="404.html">Security</a></li>
-        </ul>
-      </div>
+
+
+        <div class="sl-footer-bar">
+
+            <span>
+                © 2026 Stackly Inc. All rights reserved.
+                Demo content for presentation purposes.
+            </span>
+
+
+            <ul>
+
+                <li>
+                    <a href="404.html">
+                        Privacy
+                    </a>
+                </li>
+
+                <li>
+                    <a href="404.html">
+                        Terms
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div
+            class="sl-giant"
+            aria-hidden="true"
+        >
+            STACKLY
+        </div>
+
     </div>
-    <div class="sl-footer-bar">
-      <span>© 2026 Stackly Inc. All rights reserved. Demo content for presentation purposes.</span>
-      <ul>
-        <li><a href="404.html">Privacy</a></li>
-        <li><a href="404.html">Terms</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="sl-giant" aria-hidden="true">STACKLY</div>
-  </div>
+
 </footer>
 
+
+<!-- =========================================================
+     EXISTING JAVASCRIPT
+========================================================= -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 <script src="js/navigation.js" defer></script>
+
 <script src="js/main.js" defer></script>
+
 <script src="js/animations.js" defer></script>
+
 <script src="js/interactions.js" defer></script>
 
+
+<!-- =========================================================
+     STACKLY LOADER SCRIPT
+     This does NOT depend on main.js
+========================================================= -->
+
+<script>
+
+(function () {
+
+    const loader =
+        document.getElementById(
+            "stacklyPageLoader"
+        );
+
+    const percent =
+        document.getElementById(
+            "stacklyLoaderPercent"
+        );
+
+    const progress =
+        document.getElementById(
+            "stacklyLoaderProgressBar"
+        );
+
+
+    if (!loader) {
+
+        return;
+
+    }
+
+
+    let current = 0;
+
+    let finished = false;
+
+
+    /* =========================================================
+       PROGRESS
+    ========================================================= */
+
+    const progressTimer =
+        setInterval(function () {
+
+            if (finished) {
+
+                clearInterval(progressTimer);
+
+                return;
+
+            }
+
+
+            current += 2;
+
+
+            if (current > 100) {
+
+                current = 100;
+
+            }
+
+
+            if (percent) {
+
+                percent.textContent =
+                    current + "%";
+
+            }
+
+
+            if (progress) {
+
+                progress.style.width =
+                    current + "%";
+
+            }
+
+
+            if (current >= 100) {
+
+                clearInterval(progressTimer);
+
+            }
+
+        }, 60);
+
+
+    /* =========================================================
+       REMOVE LOADER
+    ========================================================= */
+
+    function removeLoader() {
+
+        if (finished) {
+
+            return;
+
+        }
+
+
+        finished = true;
+
+
+        clearInterval(progressTimer);
+
+
+        if (percent) {
+
+            percent.textContent = "100%";
+
+        }
+
+
+        if (progress) {
+
+            progress.style.width = "100%";
+
+        }
+
+
+        loader.style.opacity = "0";
+
+        loader.style.visibility =
+            "hidden";
+
+        loader.style.pointerEvents =
+            "none";
+
+
+        /*
+         * Remove any scroll lock.
+         */
+
+        document.documentElement.style.overflow = "";
+
+        document.body.style.overflow = "";
+
+
+        /*
+         * Completely remove loader.
+         */
+
+        setTimeout(function () {
+
+            if (
+                loader &&
+                loader.parentNode
+            ) {
+
+                loader.parentNode.removeChild(
+                    loader
+                );
+
+            }
+
+        }, 700);
+
+    }
+
+
+    /* =========================================================
+       NORMAL PAGE LOAD
+    ========================================================= */
+
+    window.addEventListener(
+        "load",
+        function () {
+
+            setTimeout(
+                removeLoader,
+                300
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       SAFETY FALLBACK
+       NEVER ALLOW PERMANENT BLACK SCREEN
+    ========================================================= */
+
+    setTimeout(
+        removeLoader,
+        5000
+    );
+
+
+})();
+
+</script>
+
+
 </body>
+
 </html>
