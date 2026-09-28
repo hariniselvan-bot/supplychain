@@ -490,6 +490,23 @@
 }
 </style>
 
+<style id="stackly-contact-validation">
+  #stackly-contact-form .sl-field-error {
+    display: none;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #d93025;
+  }
+
+  #stackly-contact-form input.is-error,
+  #stackly-contact-form select.is-error,
+  #stackly-contact-form textarea.is-error {
+    border-color: #d93025 !important;
+    box-shadow: 0 0 0 1px rgba(217, 48, 37, 0.08);
+  }
+</style>
+
 </head><body>
 <div class="sl-preloader" aria-hidden="true">
   <div class="sl-preloader-logo"> <span class="sl-preloader-word"><span>S</span><span>T</span><span>A</span><span>C</span><span>K</span><span>L</span><span>Y</span></span></div>
@@ -745,65 +762,124 @@
 
 
 <script>
-  /* Stackly Contact Form -> redirect to 404 after all required information is valid */
+  /* =========================================================
+     STACKLY CONTACT FORM
+     - Never redirect when the form is empty/incomplete.
+     - Show validation errors inline.
+     - Redirect to 404.html only when every required field
+       contains valid information.
+     ========================================================= */
   document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('stackly-contact-form');
     if (!contactForm) return;
 
+    const requiredFields = Array.from(
+      contactForm.querySelectorAll('[data-required]')
+    );
+
+    function getErrorElement(field) {
+      const fieldWrap = field.closest('.sl-field');
+      return fieldWrap ? fieldWrap.querySelector('.sl-field-error') : null;
+    }
+
+    function showError(field, message) {
+      const error = getErrorElement(field);
+
+      field.classList.add('is-error');
+      field.setAttribute('aria-invalid', 'true');
+
+      if (error) {
+        error.textContent = message;
+        error.style.display = 'block';
+      }
+    }
+
+    function clearError(field) {
+      const error = getErrorElement(field);
+
+      field.classList.remove('is-error');
+      field.removeAttribute('aria-invalid');
+
+      if (error) {
+        error.textContent = '';
+        error.style.display = 'none';
+      }
+    }
+
+    function validateField(field) {
+      const value = (field.value || '').trim();
+
+      clearError(field);
+
+      if (!value) {
+        showError(field, 'This field is required.');
+        return false;
+      }
+
+      if (field.type === 'email') {
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+        if (!validEmail) {
+          showError(field, 'Please enter a valid email address.');
+          return false;
+        }
+      }
+
+      return true;
+    }
+
     contactForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      const requiredFields = contactForm.querySelectorAll('[data-required]');
       let isValid = true;
+      let firstInvalidField = null;
 
       requiredFields.forEach(function (field) {
-        const value = (field.value || '').trim();
-        const fieldWrap = field.closest('.sl-field');
-        const error = fieldWrap ? fieldWrap.querySelector('.sl-field-error') : null;
+        const fieldIsValid = validateField(field);
 
-        field.classList.remove('is-error');
-        if (error) error.textContent = '';
-
-        if (!value) {
+        if (!fieldIsValid) {
           isValid = false;
-          field.classList.add('is-error');
-          if (error) error.textContent = 'This field is required.';
-          return;
-        }
 
-        if (field.type === 'email') {
-          const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-
-          if (!validEmail) {
-            isValid = false;
-            field.classList.add('is-error');
-            if (error) error.textContent = 'Please enter a valid email address.';
+          if (!firstInvalidField) {
+            firstInvalidField = field;
           }
         }
       });
 
-      if (!isValid) return;
+      /* Incomplete/invalid form: stay on contact page. */
+      if (!isValid) {
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+        }
+        return;
+      }
 
-      // ALL required information is valid.
-      // Go directly to the 404 page — no success message is shown.
+      /* All required information is valid: redirect to 404. */
       window.location.href = '404.html';
     });
 
+    /* Clear inline errors when the user corrects a field. */
     contactForm.querySelectorAll('input, select, textarea').forEach(function (field) {
-      function clearError() {
-        if ((field.value || '').trim()) {
-          field.classList.remove('is-error');
-          const wrap = field.closest('.sl-field');
-          const error = wrap ? wrap.querySelector('.sl-field-error') : null;
-          if (error) error.textContent = '';
+      field.addEventListener('input', function () {
+        if (field.classList.contains('is-error')) {
+          validateField(field);
         }
-      }
+      });
 
-      field.addEventListener('input', clearError);
-      field.addEventListener('change', clearError);
+      field.addEventListener('change', function () {
+        if (field.classList.contains('is-error')) {
+          validateField(field);
+        }
+      });
+
+      field.addEventListener('blur', function () {
+        if (field.classList.contains('is-error')) {
+          validateField(field);
+        }
+      });
     });
   });
 </script>
 
-</body>
+</body> 
 </html>
